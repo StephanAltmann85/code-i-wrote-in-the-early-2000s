@@ -1,0 +1,94 @@
+<?php
+/*
+language: Deutsch
+category: members
+*/
+
+
+$this->items['LANG_MEMBERS_AIM']="AIM-Name von \$username: \$aim";
+$this->items['LANG_MEMBERS_BUDDY']="Nehmen Sie \$username in Ihre Freundesliste auf";
+$this->items['LANG_MEMBERS_HOMEPAGE']="Homepage von \$username";
+$this->items['LANG_MEMBERS_ICQ']="F&uuml;gen Sie \$username in Ihre Kontaktliste ein";
+$this->items['LANG_MEMBERS_MBL_AIM']="AIM";
+$this->items['LANG_MEMBERS_MBL_AVATAR']="Avatar";
+$this->items['LANG_MEMBERS_MBL_BIRTHDAY']="Geburtstag";
+$this->items['LANG_MEMBERS_MBL_BUDDY']="Freund";
+$this->items['LANG_MEMBERS_MBL_EMAIL']="E-Mail";
+$this->items['LANG_MEMBERS_MBL_GENDER']="Geschlecht";
+$this->items['LANG_MEMBERS_MBL_HOMEPAGE']="Homepage";
+$this->items['LANG_MEMBERS_MBL_ICQ']="ICQ";
+$this->items['LANG_MEMBERS_MBL_LASTACTIVITY']="Letzte Aktivit&auml;t";
+$this->items['LANG_MEMBERS_MBL_LETTER_ALL']="alle";
+$this->items['LANG_MEMBERS_MBL_MSN']="MSN";
+$this->items['LANG_MEMBERS_MBL_ORDER_ASC']="aufsteigender";
+$this->items['LANG_MEMBERS_MBL_ORDER_DESC']="absteigender";
+$this->items['LANG_MEMBERS_MBL_PM']="PN";
+$this->items['LANG_MEMBERS_MBL_POSTSPERDAY']="Beitr&auml;ge pro Tag";
+$this->items['LANG_MEMBERS_MBL_RANKIMAGE']="Ranggrafik";
+$this->items['LANG_MEMBERS_MBL_RANKTITLE']="Rangtitel";
+$this->items['LANG_MEMBERS_MBL_REGDATE']="Registrierungsdatum";
+$this->items['LANG_MEMBERS_MBL_SEARCH']="Suchen";
+$this->items['LANG_MEMBERS_MBL_SIGNATURE']="Signatur";
+$this->items['LANG_MEMBERS_MBL_SORTOPTIONS']="Zeige \$options_letter Benutzer und Sortiere nach \$options_sortby in \$options_order Reihenfolge.";
+$this->items['LANG_MEMBERS_MBL_TITLE']="Benutzertitel";
+$this->items['LANG_MEMBERS_MBL_USERLEVEL']="Benutzerlevel";
+$this->items['LANG_MEMBERS_MBL_USERNAME']="Benutzername";
+$this->items['LANG_MEMBERS_MBL_USERPOSTS']="Beitr&auml;ge";
+$this->items['LANG_MEMBERS_MBL_USERTEXT']="Benutzertext";
+$this->items['LANG_MEMBERS_MBL_YIM']="YIM";
+$this->items['LANG_MEMBERS_MBS_DATE_DAY']="Tag";
+$this->items['LANG_MEMBERS_MBS_DATE_MONTH']="Monat";
+$this->items['LANG_MEMBERS_MBS_DATE_YEAR']="Jahr";
+$this->items['LANG_MEMBERS_MBS_ORDER_ASC']="aufsteigende Reihenfolge";
+$this->items['LANG_MEMBERS_MBS_ORDER_DESC']="absteigende Reihenfolge";
+$this->items['LANG_MEMBERS_MBS_SEARCHFIELDS']="Nach folgenden Kriterien: (Erl&auml;uterung: Freie Felder werden nicht beachtet.)";
+$this->items['LANG_MEMBERS_MBS_SEARCHFIELD_CONTAINS']="\$searchfield enth&auml;lt:";
+$this->items['LANG_MEMBERS_MBS_SEARCHFIELD_IS']="\$searchfield ist:";
+$this->items['LANG_MEMBERS_MBS_SORT']="Sortierung:";
+$this->items['LANG_MEMBERS_MBS_TITLE']="Mitgliedersuche";
+$this->items['LANG_MEMBERS_MBS_USERPERPAGE']="Anzahl Benutzer pro Seite:";
+$this->items['LANG_MEMBERS_MBS_USERPOSTS_LESSTHEN']="Benutzerbeitr&auml;ge weniger als:";
+$this->items['LANG_MEMBERS_MBS_USERPOSTS_MORETHEN']="Benutzerbeitr&auml;ge mehr als:";
+$this->items['LANG_MEMBERS_MBS_VIEW_AND_SORT']="Anzeige und Sortierung:";
+$this->items['LANG_MEMBERS_MSN']="MSN Passport-Profil von \$username anzeigen";
+$this->items['LANG_MEMBERS_PM']="\$username eine private Nachricht senden";
+$this->items['LANG_MEMBERS_PROFILE_ADMINOPTIONS']="Administrative Optionen:";
+$this->items['LANG_MEMBERS_PROFILE_AIM']="AIM-Name:";
+$this->items['LANG_MEMBERS_PROFILE_BIRTHDAY']="Geburtstag:";
+$this->items['LANG_MEMBERS_PROFILE_CAPTION']="Avatar/Infotext";
+$this->items['LANG_MEMBERS_PROFILE_CONTACT']="Kontaktaufnahme:";
+$this->items['LANG_MEMBERS_PROFILE_EMAIL']="E-Mail:";
+$this->items['LANG_MEMBERS_PROFILE_FEMALE']="weiblich";
+$this->items['LANG_MEMBERS_PROFILE_FORUM']="Forum:";
+$this->items['LANG_MEMBERS_PROFILE_GENDER']="Geschlecht:";
+$this->items['LANG_MEMBERS_PROFILE_HOMEPAGE']="Homepage:";
+$this->items['LANG_MEMBERS_PROFILE_ICQ']="ICQ-Nummer:";
+$this->items['LANG_MEMBERS_PROFILE_LANGUAGE']="Sprache:";
+$this->items['LANG_MEMBERS_PROFILE_LASTACTIVITY']="Letzte Aktivit&auml;t:";
+$this->items['LANG_MEMBERS_PROFILE_LASTPOST']="Letzter Beitrag:";
+$this->items['LANG_MEMBERS_PROFILE_LOCATION']="Zur Zeit unterwegs:";
+$this->items['LANG_MEMBERS_PROFILE_MALE']="m&auml;nnlich";
+$this->items['LANG_MEMBERS_PROFILE_MSN']="MSN-Name:";
+$this->items['LANG_MEMBERS_PROFILE_NODECLARATION']="keine Angabe";
+$this->items['LANG_MEMBERS_PROFILE_POSTED_ON']="Geschrieben:";
+$this->items['LANG_MEMBERS_PROFILE_POSTS']="Beitr&auml;ge:";
+$this->items['LANG_MEMBERS_PROFILE_POSTSPERDAY']="\$postperday Beitr&auml;ge pro Tag";
+$this->items['LANG_MEMBERS_PROFILE_RANK']="Rang:";
+$this->items['LANG_MEMBERS_PROFILE_REGDATE']="Registriert am:";
+$this->items['LANG_MEMBERS_PROFILE_TITLE']="Profil von \$username";
+$this->items['LANG_MEMBERS_PROFILE_USERDEL']="Benutzer l&ouml;schen";
+$this->items['LANG_MEMBERS_PROFILE_USEREDIT']="Benutzer bearbeiten";
+$this->items['LANG_MEMBERS_PROFILE_YIM']="YIM-Name:";
+$this->items['LANG_MEMBERS_RATING_RATE_MEMBER']="Mitglied bewerten";
+$this->items['LANG_MEMBERS_RATING_RATING']="Bewertung";
+$this->items['LANG_MEMBERS_RATING_RATINGS']="\$count Bewertung(en) - Durchschnitt: \$rating";
+$this->items['LANG_MEMBERS_SEARCH']="Beitr&auml;ge von \$username suchen";
+$this->items['LANG_MEMBERS_SENDEMAIL']="E-Mail an \$username senden";
+$this->items['LANG_MEMBERS_USERLEVEL_EXPERIENCE']="Erfahrungspunkte:";
+$this->items['LANG_MEMBERS_USERLEVEL_LEVEL']="Level:";
+$this->items['LANG_MEMBERS_USERLEVEL_NEEDEXP']="\$needexp Erfahrungspunkt(e) f&uuml;r den n&auml;chsten Levelanstieg";
+$this->items['LANG_MEMBERS_USERLEVEL_NEXTLEVEL']="N&auml;chster Level:";
+$this->items['LANG_MEMBERS_USEROFFLINE']="\$username ist offline";
+$this->items['LANG_MEMBERS_USERONLINE']="\$username ist online";
+$this->items['LANG_MEMBERS_YIM']="YIM-Name von \$username: \$yim";
+?>

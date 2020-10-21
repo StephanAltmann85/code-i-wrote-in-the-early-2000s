@@ -1,0 +1,11 @@
+<?php
+/*
+acp template
+templatename: stats_showbit
+*/
+
+$this->templates['acp_stats_showbit']="<tr>
+ <td width=\\\"0%\\\" nowrap=\\\"nowrap\\\">\$stat[1]</td>
+ <td width=\\\"100%\\\" nowrap=\\\"nowrap\\\"><img src=\\\"{\$style['imagefolder']}/stats.gif\\\" height=\\\"9\\\" width=\\\"\$width\\\" border=\\\"0\\\" alt=\\\"\\\" /> \$stat[0]</td>
+</tr>";
+?>

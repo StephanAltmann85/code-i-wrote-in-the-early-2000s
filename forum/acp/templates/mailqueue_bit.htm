@@ -1,0 +1,8 @@
+<tr class="$rowclass">
+ <td width="100%"><a href="otherstuff.php?action=mailqueue_read&amp;mailid=$row[mailid]&amp;sid=$session[hash]">$row[subject]</a></td>
+ <td nowrap="nowrap"><a href="../profile.php?userid=$row[userid]" target="_blank">$row[username]</a></td>
+ <td nowrap="nowrap">$senddate $sendtime</td>
+ <td nowrap="nowrap"><if($finished)><then>$percent%</then><else><span style="color: red;">$percent%</span></else></if></td>
+ <if(!$finished)><then><td nowrap="nowrap"><input type="button" value="{$lang->items['LANG_ACP_OTHERSTUFF_MAILQUEUE_SEND']}" onclick="update('email', $row[mailid], '{$lang->items['LANG_ACP_OTHERSTUFF_EMAIL']}');" /></td></then></if>
+ <td nowrap="nowrap"<if($finished)><then> colspan="2"</then></if>><input type="button" value="{$lang->items['LANG_ACP_OTHERSTUFF_MAILQUEUE_DELETE']}" onclick="window.location.href='otherstuff.php?action=mailqueue&deleteid=$row[mailid]&sid=$session[hash]';" /></td>
+</tr>

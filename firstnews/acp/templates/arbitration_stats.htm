@@ -1,0 +1,83 @@
+<table cellpadding="4" cellspacing="1" border="0" width="90%" bgcolor="#000000">
+<tr bgcolor="#FCC472">
+ <td align="left"><b>Statistiken</b></td>
+</tr>
+<tr bgcolor="#FFDDAA">
+ <td width="100%" valign="top" align="center">
+
+ <form action="index.php" method="POST" target="">
+ <input type="hidden" name="sid" value="$sid">
+ <input type="hidden" name="action" value="arbitration_stats">
+ <table width="100%">
+ <tr>
+  <td valign="middle" width="100"><b>Suchen nach:</b></td>
+  <td align="left">
+   <select name="search" size="1">
+    <option value="">Alle</option>
+    <option value="unpayed">Unbezahlt</option>
+    <option value="waiting">Auf Auszahlung wartend</option>
+    <option value="payed_out">Auszahlung erfolgt</option>
+    <option value="id">Nach Werber-Id</option>
+   </select>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" width="100"><b>Sortieren nach:</b></td>
+  <td align="left">
+   <select name="sort" size="1">
+    <option value="associate_id">WERBER-ID</option>
+    <option value="date">Bestelldatum</option>
+    <option value="payed">Datum Geldeingang</option>
+    <option value="payed_out">Auszahlung Provision</option>
+   </select>
+  </td>
+ </tr>
+ <tr>
+  <td valign="middle" width="100"><b>Sortieren:</b></td>
+  <td align="left">
+   <select name="sort_direction" size="1">
+    <option value="DESC">Absteigend</option>
+    <option value="ASC">Aufsteigend</option>
+   </select>
+  </td>
+ </tr>
+ <tr>
+  <td>WERBER-ID:</td>
+  <td><input type="Text" name="associate_id" value="WERBER-ID" size="10" maxlength="6"></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><input type="Submit" name="" value="Suchen"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr></form>
+ </table>
+
+ <div style="padding: 4px;" align="left"><b><u>Statistik - Vermittelte Bestellungen</u></b></div><br>
+
+ <table width="98%" cellspacing="1" cellpadding="2" border="0" bgcolor="#000000">
+ <tr>
+  <td bgcolor="#FFD695" align="center" width="30"></td>
+  <td bgcolor="#FFD695" align="center" width="75"><b>Datum</b></td>
+  <td bgcolor="#FFD695" align="center" width="120"><b>Bestellwert</b></td>
+  <td bgcolor="#FFD695" align="center" width="140"><b>Status Bestellung</b></td>
+  <td bgcolor="#FFD695" align="center"><b>Status Abrechnung</b></td>
+ </tr>
+ $arbitration_stats_bit
+ </table><br>
+
+ <table width="100%">
+ <tr>
+  <td><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ <tr>
+  <td><b><u>Hinweise:</u></b><br>
+  -Die Auszahlung der Provision erfolgt im Regelfall erst $options[pay_period] Tage nach Geldeingang.<br>
+  -Die H&ouml;he der Werbekostenerstattung betr&auml;gt $options[commission]%.</td>
+ </tr>
+ </table>
+
+ </td>
+</tr>
+</table><br><br>

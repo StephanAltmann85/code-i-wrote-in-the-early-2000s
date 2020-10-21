@@ -1,0 +1,25 @@
+<?php
+/*
+acp template
+templatename: avatar_readfolder_done
+*/
+
+$this->templates['acp_avatar_readfolder_done']="<html>
+
+<head>
+<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html;charset=iso-8859-1\\\">
+<link rel=\\\"stylesheet\\\" href=\\\"css/main.css\\\">
+</head>
+
+<body>
+<table cellpadding=4 cellspacing=1 border=0 class=\\\"tblborder\\\" width=\\\"95%\\\" align=\\\"center\\\">
+  <tr class=\\\"tblhead\\\">
+   <td>Avatare einlesen</td>
+  </tr>
+  <tr class=\\\"firstrow\\\">
+   <td>Es wurde(n) \$goodcount Avatar(e) eingelesen von \$totalcount gefunden Datei(en).</td>
+  </tr>
+ </table>
+</body>
+</html>";
+?>

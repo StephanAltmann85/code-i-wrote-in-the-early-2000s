@@ -1,0 +1,5 @@
+<tr class="$rowclass">
+ <td width="100%"><b>$row[bbcodetag]</b></td>
+ <if(checkAdminPermissions("a_can_bbcodes_edit"))><then><td nowrap="nowrap"><a href="bbcodes.php?action=edit&amp;bbcodeid=$row[bbcodeid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EDIT']}</a></td></then></if>
+ <if(checkAdminPermissions("a_can_bbcodes_del"))><then><td nowrap="nowrap"><a href="bbcodes.php?action=del&amp;bbcodeid=$row[bbcodeid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</a></td></then></if>
+</tr>

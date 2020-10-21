@@ -1,0 +1,1 @@
+ &raquo; <a href="archive/$board[boardid]/board.html">$board[title]</a>

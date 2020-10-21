@@ -1,0 +1,5 @@
+<tr class="$rowclass">
+ <td width="100%"><b>$row[ranktitle]</b></td>
+ <if(checkAdminPermissions("a_can_ranks_edit"))><then><td nowrap="nowrap"><a href="ranks.php?action=edit&amp;rankid=$row[rankid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EDIT']}</a></td></then></if>
+ <if(checkAdminPermissions("a_can_ranks_del"))><then><td nowrap="nowrap"><a href="ranks.php?action=del&amp;rankid=$row[rankid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</a></td></then></if>
+</tr>

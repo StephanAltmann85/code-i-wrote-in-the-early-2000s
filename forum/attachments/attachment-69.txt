@@ -1,0 +1,26 @@
+Von: www.hessler-motorsport.de - Newsletter
+[stefan@hessler-motorsport.de]
+Gesendet: Montag, 24. November 2003 12:55
+An: donald_vieweg@t-online.de
+Betreff: Test-HTML
+
+Content-type: text/html; charset=iso-8859-1 Content-transfer-encoding: 8Bit
+
+Message-Id: <E1AOFIn-0007FF-00@mrvnet.kundenserver.de>
+X-Provags-ID: kundenserver.de abuse@kundenserver.de auth:d41d8cd98f00b204e9800998ecf8427e
+X-Seen: false
+X-NAS-Classification: 0
+X-NAS-MessageID: 80
+X-NAS-Validation: {7E0088F8-A625-4E38-A533-ADDFD8147335}
+
+
+<b>HTML</b><br>
+
+<a href="http://www.potzkoten.tv">www.potzkoten.tv</a><br>
+
+<br>
+
+-----------<br>
+
+Wenn Sie keine weiteren Newsletter erhalten wollen, können Sie sich unter <a href="http://www.dovi.de/hessler/newsletter/" target="_blank">http://www.dovi.de/hessler/newsletter/</a> aus unserer Datenbank austragen.
+

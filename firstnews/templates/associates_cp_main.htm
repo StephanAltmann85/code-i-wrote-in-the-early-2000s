@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>1st News - Das Newsletterscript f&uuml;r den professionellen Einsatz</title>
+
+<style type="text/css">
+<!--
+body {
+ font-family: Verdana;
+ font-size: 10px;
+ text-align: left;
+ color: #000000;
+
+ margin-top: 15px;
+}
+a:link {
+ font-family: Verdana;
+ font-size: 10px;
+ text-decoration: underline;
+ text-align: left;
+ color: #000000;
+}
+a:visited {
+ font-family: Verdana;
+ font-size: 10px;
+ text-decoration: underline;
+ text-align: left;
+ color: #000000;
+}
+a:hover {
+ font-family: Verdana;
+ font-size: 10px;
+ text-decoration: none;
+ text-align: left;
+ color: #880000;
+}
+TEXTAREA {
+ FONT-SIZE: 12px;
+ FONT-FAMILY: Verdana;
+ COLOR: #000000;
+ BACKGROUND-COLOR: #CFCFCF;
+}
+input {
+ FONT-SIZE: 11px;
+ FONT-FAMILY: Verdana;
+ COLOR: #000000;
+ BACKGROUND-COLOR: #97BBE2;
+
+ border-top-width : 1px;
+ border-right-width : 1px;
+ border-bottom-width : 1px;
+ border-left-width : 1px;
+
+ border-style: dashed;
+
+ border-top-color : #000000;
+ border-right-color : #000000;
+ border-bottom-color : #000000;
+ border-left-color : #000000;
+
+ margin-bottom: 1px;
+}
+.subscription {
+ FONT-SIZE: 11px;
+ FONT-FAMILY: Verdana;
+ COLOR: #000000;
+ BACKGROUND-COLOR: #FFD695;
+
+ border-top-width : 1px;
+ border-right-width : 1px;
+ border-bottom-width : 1px;
+ border-left-width : 1px;
+
+ border-style: solid;
+
+ border-top-color : #000000;
+ border-right-color : #000000;
+ border-bottom-color : #000000;
+ border-left-color : #000000;
+
+ margin-bottom: 1px;
+}
+td {
+ font-size: 10px;
+ FONT-FAMILY: Verdana;
+ color: #000000;
+}
+#table_top { background-image: url(images/top_back.gif); }
+#table_bottom {
+ background-image: url(images/bottom_back.gif);
+ font-weight: bold;
+}
+#nav { background-image: url(images/nav_back.gif); }
+#border_horizontal { background-image: url(images/border_horizontal.gif); }
+#border_vertical { background-image: url(images/border_vertical.gif); }
+-->
+</style>
+
+<script language="JavaScript">
+<!--
+function Message(Message) {
+ var x = window.confirm(Message);
+ return x;
+}
+
+function Generate(Text)
+{
+  Insert = '<a href="$options[url]/index.php?associate=$_REQUEST[id]" target="_blank">' + Text + '</a>';
+  document.textlink.textarea.value = Insert;
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#ffffff">
+
+<div align="center">
+
+<table width="80%" cellspacing="1" cellpadding="0" border="0" bgcolor="#000000">
+<tr id="table_top">
+ <td colspan="2" align="left" valign="bottom">
+<img src="images/top_logo.gif" width="468" height="100" border="0" alt="">
+ </td>
+</tr>
+<tr height="25" id="nav">
+ <td colspan="2" align="center">
+
+ <a href="index.php?associate=$associate"><img src="images/nav_home.gif" border="0" alt="Startseite"></a><a href="products.php"><img src="images/nav_products.gif" border="0" alt="Produkt&uuml;bersicht"></a><a href="subscription.php"><img src="images/nav_shop.gif" border="0" alt="Produkt&uuml;bersicht"></a><a href="http://www.coder-treff.de" target="_blank"><img src="images/nav_support.gif" border="0" alt="Support-Forum"></a><img src="images/nav_partner.gif" border="0" alt="Partnerprogramm"><a href="contact.php"><img src="images/nav_contact.gif" border="0" alt="Kontakt"></a><a href="agb.php"><img src="images/nav_agb.gif" border="0" alt="Allgemeine Gesch&auml;ftsbedingungen"></a><a href="impressum.php"><img src="images/nav_impressum.gif" border="0" alt="Impressum"></a>
+
+ </td>
+</tr>
+<tr>
+ <td width="150" align="center" bgcolor="#97BBE2" valign="top">
+
+ <table width="150" cellspacing="4" cellpadding="0" border="0" bgcolor="#97BBE2">
+ <tr>
+  <td valign="top"><br>
+  $associates_cp_nav
+
+  <img src="images/notice.gif" width="8" height="8" border="0" alt="">&nbsp;<b>Partnerseiten:</b><br>
+  $partner_links<br>
+
+  <img src="images/notice.gif" width="8" height="8" border="0" alt="">&nbsp;<b>1st News bewerten:</b><br>
+  $voting_links<br>
+
+  $voting_forms
+
+  </td>
+ </tr>
+ </table>
+
+ </td>
+ <td bgcolor="#ffffff" width="100%" valign="top" align="center"><br><br>
+
+ $main_bit
+
+ <b>Generationszeit:</b> $exec_time Sekunden - <b>verwendete Templates:</b> $used_templates - <b>Datenbank-Queries:</b> $used_queries<br><br>
+
+ </td>
+</tr>
+<tr height="20" id="table_bottom">
+ <td colspan="2" align="left">&nbsp;Copyright & Design by Stephan Altmann</td>
+</tr>
+</table>
+
+
+
+</div>
+</body>
+</html>

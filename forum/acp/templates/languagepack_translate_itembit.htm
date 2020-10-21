@@ -1,0 +1,11 @@
+<tr class="$rowclass">
+ <td colspan="2"><a name="$row[itemname]" id="$row[itemname]"></a>$row[itemname]:<if(checkAdminPermissions("a_can_languagepack_delitem"))><then> (<a href="languagepack.php?action=delitem&amp;itemid=$row[itemid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</a>)</then></if></td>
+</tr>
+<tr class="$rowclass">
+ <td colspan="2"><textarea name="items[$row[itemid]]" rows="4" cols="100">$row[item]</textarea>
+ <if($row['translation'])><then>
+ <br /><br />{$lang->items['LANG_ACP_LANGUAGEPACK_ORIGINAL']} ($translation_languagepackname):<br />
+ <textarea name="foo" rows="4" cols="100" readonly="readonly">$row[translation]</textarea>
+ </then></if>
+ <br />&nbsp;</td>
+</tr>

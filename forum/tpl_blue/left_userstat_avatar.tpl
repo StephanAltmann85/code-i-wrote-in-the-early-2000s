@@ -1,0 +1,1 @@
+<img src="$avatarname" alt="{$lang->items['LANG_GLOBAL_AVATAR']}" title="{$lang->items['LANG_GLOBAL_AVATAR']}"><br />

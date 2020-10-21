@@ -1,0 +1,1 @@
+ ... <a href="thread.php?threadid=$threads[threadid]<if($search[searchstring])><then>&amp;hilight=$search[searchstring]</then></if><if($search[searchuserid])><then>&amp;hilightuser=$search[searchuserid]</then></if>&amp;page=$xpages{$SID_ARG_2ND}">{$lang->items['LANG_BOARD_LASTPAGE']}</a>

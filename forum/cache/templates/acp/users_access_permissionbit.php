@@ -1,0 +1,15 @@
+<?php
+/*
+acp template
+templatename: users_access_permissionbit
+*/
+
+$this->templates['acp_users_access_permissionbit']="<tr class=\\\"\$rowclass\\\">
+ <td>\$permission_name</td>
+ <td><select name=\\\"permission[\$permission]\\\">
+  <option value=\\\"-1\\\"{\$selected[\$permission][2]}>{\$lang->items['LANG_ACP_GLOBAL_USEGLOBAL']}</option>
+  <option value=\\\"1\\\"{\$selected[\$permission][1]}>{\$lang->items['LANG_ACP_GLOBAL_YES']}</option>
+  <option value=\\\"0\\\"{\$selected[\$permission][0]}>{\$lang->items['LANG_ACP_GLOBAL_NO']}</option>
+ </select></td>
+</tr>";
+?>

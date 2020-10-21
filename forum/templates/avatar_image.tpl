@@ -1,0 +1,1 @@
+<img src="$avatarname" border="0" alt="$avatarname" title="" />

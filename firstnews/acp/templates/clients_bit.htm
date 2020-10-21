@@ -1,0 +1,11 @@
+<tr>
+ <td bgcolor="#FFDDAA" rowspan="1">$client[name], $client[first_name]<br>
+$client[street]<br>
+$client[location]</td>
+ <td bgcolor="#FFDDAA" align="center" rowspan="2">$client[date]</td>
+ <td bgcolor="#FFDDAA" align="center"><a href="index.php?action=edit_client&sid=$sid&id=$client[id]">Bearbeiten</a></td>
+</tr>
+<tr>
+ <td bgcolor="#FFD695" align="left"><a href="mailto:$client[email]">$client[email]</a></td>
+ <td bgcolor="#FFD695" align="left"><b>Bezahlt:</b> $client[payed]</td>
+</tr>

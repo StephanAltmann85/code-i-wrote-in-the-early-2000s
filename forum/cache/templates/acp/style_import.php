@@ -1,0 +1,127 @@
+<?php
+/*
+acp template
+templatename: style_import
+*/
+
+$this->templates['acp_style_import']="<?xml version=\\\"1.0\\\" encoding=\\\"{\$lang->items['LANG_GLOBAL_ENCODING']}\\\"?>
+<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">
+<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\" dir=\\\"{\$lang->items['LANG_GLOBAL_DIRECTION']}\\\" lang=\\\"{\$lang->items['LANG_GLOBAL_LANGCODE']}\\\" xml:lang=\\\"{\$lang->items['LANG_GLOBAL_LANGCODE']}\\\">
+
+<head>
+<title></title>
+<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset={\$lang->items['LANG_GLOBAL_ENCODING']}\\\" />
+<link rel=\\\"stylesheet\\\" href=\\\"css/main.css\\\" />
+<script type=\\\"text/javascript\\\">
+<!--
+function select_all(what, status)
+{
+	list = document.getElementById(what);
+	for(i=0;i<list.length;i++)
+	{
+		list.options[i].selected=true;
+	}
+}
+
+function preview_image(what)
+{
+	list = document.getElementById(what);
+	if(list.selectedIndex>=0 && list.options[list.selectedIndex].value!='') document.imagepreview.src='style.php?action=imagepreview&sid=\$session[hash]&stylefile=\$stylefile&image='+list.options[list.selectedIndex].value;
+	else document.imagepreview.src='{\$style['imagefolder']}/blank.gif';
+}
+//-->
+</script>
+</head>
+<body>
+<form method=\\\"post\\\" action=\\\"style.php\\\" name=\\\"bbform\\\">
+\".((!\$template_options) ? (\"
+<input type=\\\"hidden\\\" name=\\\"templates\\\" value=\\\"\\\" />
+<input type=\\\"hidden\\\" name=\\\"templatepackid\\\" value=\\\"\\\" />
+<input type=\\\"hidden\\\" name=\\\"templatepackname\\\" value=\\\"\\\" />
+\") : (\"\")).\"
+
+<table cellpadding=\\\"4\\\" cellspacing=\\\"1\\\" border=\\\"0\\\" class=\\\"tblborder\\\" width=\\\"100%\\\" align=\\\"center\\\">
+ <tr class=\\\"tblhead\\\">
+  <td colspan=\\\"2\\\">{\$lang->items['LANG_ACP_STYLE_IMPORT']}</td>
+ </tr>
+<tr class=\\\"firstrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_GLOBAL_IMPORT_VERSION']}</b></td>
+ <td width=\\\"60%\\\">{\$data[general][wbbversion]}</td>
+</tr>
+<tr class=\\\"secondrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_GLOBAL_IMPORT_DATE']}</b></td>
+ <td width=\\\"60%\\\">\$exportdate</td>
+</tr>
+<tr class=\\\"firstrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_IMPORT_STYLE']}</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_STYLE_DESC']}</td>
+ <td width=\\\"60%\\\"><input type=\\\"checkbox\\\" name=\\\"importstyle\\\" value=\\\"1\\\" checked=\\\"checked\\\" onclick=\\\"if(this.checked==true) document.bbform.importdesignpack.checked=true;\\\" /></td>
+</tr>
+<tr class=\\\"secondrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_STYLENAME']}:</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_STYLENAME_DESC']}</td>
+ <td width=\\\"60%\\\"><input type=\\\"text\\\" name=\\\"stylename\\\" value=\\\"{\$data[general][stylename]}\\\" size=\\\"40\\\" /></td>
+</tr>
+
+\".((isset(\$data[designpack][designelements]) && count(\$data[designpack][designelements])) 
+? (\"
+<tr class=\\\"firstrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_IMPORT_DESIGNPACK']}</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_DESIGNPACK_DESC']}</td>
+ <td width=\\\"60%\\\"><input type=\\\"checkbox\\\" name=\\\"importdesignpack\\\" value=\\\"1\\\" checked=\\\"checked\\\" /></td>
+</tr>
+<tr class=\\\"secondrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_DESIGNPACKNAME']}:</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_DESIGNPACKNAME_DESC']}</td>
+ <td width=\\\"60%\\\"><input type=\\\"text\\\" size=\\\"40\\\" name=\\\"designpackname\\\" value=\\\"{\$data[designpack][designpackname]}\\\" /></td>
+</tr>
+\") : (\"\")
+).\"
+
+\".((\$template_options) 
+? (\"
+<tr class=\\\"firstrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_TEMPLATEPACK']}</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_TEMPLATEPACK_DESC']}</td>
+ <td width=\\\"60%\\\"><select name=\\\"templatepackid\\\">
+ \$templatepack_options
+ </select><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_TEMPLATEPACK_CREATE_NEW']}<br /><input type=\\\"text\\\" name=\\\"templatepackname\\\" value=\\\"\\\" size=\\\"20\\\" />
+ 
+ </td>
+</tr>
+<tr class=\\\"secondrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_IMPORT_TEMPLATE']}</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_TEMPLATE_DESC']}<br /><a href=\\\"#\\\" onclick=\\\"select_all('templates',true); return false;\\\">{\$lang->items['LANG_ACP_STYLE_SELECT_ALL']}</a></td>
+  <td width=\\\"60%\\\"><select id=\\\"templates\\\" name=\\\"templates[]\\\" size=\\\"20\\\" style=\\\"width: 95%;\\\" multiple=\\\"multiple\\\">\$template_options</select></td>
+ </tr>
+\") : (\"\")
+).\"
+
+\".((\$image_options) 
+? (\"
+<tr class=\\\"firstrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_IMPORT_IMAGEFOLDER']}</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_IMAGEFOLDER_DESC']}</td>
+ <td width=\\\"60%\\\"><input type=\\\"text\\\" size=\\\"40\\\" name=\\\"imagefolder\\\" value=\\\"{\$data[designelements][imagefolder]}\\\" /></td>
+</tr>
+<tr class=\\\"secondrow\\\">
+ <td valign=\\\"top\\\"><b>{\$lang->items['LANG_ACP_STYLE_IMPORT_IMAGES']}</b><br />{\$lang->items['LANG_ACP_STYLE_IMPORT_IMAGES_DESC']}<br />
+ <a href=\\\"#\\\" onclick=\\\"select_all('images',true); return false;\\\">{\$lang->items['LANG_ACP_STYLE_SELECT_ALL']}</a><br /><br /><img name=\\\"imagepreview\\\" src=\\\"{\$style['imagefolder']}/blank.gif\\\" alt=\\\"\\\" border=\\\"0\\\" />
+ </td>
+  <td width=\\\"60%\\\"><select id=\\\"images\\\" name=\\\"images[]\\\" size=\\\"20\\\" style=\\\"width: 95%;\\\" multiple=\\\"multiple\\\" onchange=\\\"preview_image('images');\\\">\$image_options</select></td>
+</tr>
+\") : (\"\")
+).\"
+
+<tr class=\\\"firstrow\\\">
+  <td colspan=\\\"2\\\" align=\\\"center\\\"><input type=\\\"submit\\\" value=\\\"{\$lang->items['LANG_ACP_GLOBAL_START']}\\\" /> <input type=\\\"reset\\\" value=\\\"{\$lang->items['LANG_ACP_GLOBAL_RESETFORM']}\\\" /></td>
+</tr>
+ 
+</table>
+
+
+
+
+<input type=\\\"hidden\\\" name=\\\"sid\\\" value=\\\"\$session[hash]\\\" />
+<input type=\\\"hidden\\\" name=\\\"action\\\" value=\\\"import\\\" />
+<input type=\\\"hidden\\\" name=\\\"doimport\\\" value=\\\"1\\\" />
+<input type=\\\"hidden\\\" name=\\\"stylefile\\\" value=\\\"\$stylefile\\\" />
+<input type=\\\"hidden\\\" name=\\\"send\\\" value=\\\"send\\\" />
+</form>
+ 
+</body>
+</html>";
+?>

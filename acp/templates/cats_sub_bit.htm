@@ -1,0 +1,9 @@
+<tr>
+ <td bgcolor="#D6E2F1" align="left" width="40">&nbsp;</td>
+  <td bgcolor="#A7BFDB" align="left" width="40">
+  <select name="sort_$subcats[catid]" size="1">$cats_sort_bit</select>
+ </td>
+ <td bgcolor="#A7BFDB" align="left"><b>$subcats[title]</b></td>
+ <td bgcolor="#A7BFDB" width="80" align="center"><a href="index.php?action=cat_edit&catid=$subcats[catid]&sid=$sid">bearbeiten</a></td>
+ <td bgcolor="#A7BFDB" width="80" align="center"><a href="index.php?action=cats&del=yes&catid=$subcats[catid]&sid=$sid" onClick="return Message('Kategorie &quot;$subcats[title]&quot; wirklich l&ouml;schen?')">entfernen</a></td>
+</tr>

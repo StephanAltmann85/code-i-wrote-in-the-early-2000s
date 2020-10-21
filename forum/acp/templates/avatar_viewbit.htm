@@ -1,0 +1,8 @@
+<tr class="$rowclass">
+ <td>$avatarimage</td>
+ <td align="center">$row[avatarname].$row[avatarextension]</td>
+ <td align="center">$row[title]</td>
+ <td align="center">$row[needposts]</td>
+ <if(checkAdminPermissions("a_can_avatars_edit"))><then><td align="center"><a href="avatar.php?action=edit&amp;avatarid=$row[avatarid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EDIT']}</a></td></then></if>
+ <if(checkAdminPermissions("a_can_avatars_del"))><then><td align="center"><a href="avatar.php?action=del&amp;avatarid=$row[avatarid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</a></td></then></if>
+</tr>

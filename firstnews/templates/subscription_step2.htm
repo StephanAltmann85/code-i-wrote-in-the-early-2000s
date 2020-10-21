@@ -1,0 +1,119 @@
+<table width="84%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
+ <tr height="1" id="border_horizontal">
+  <td bgcolor="#FFFFFF" colspan="3"><img src="../images/border_horizontal.gif" width="6" height="1" border="0" alt=""></td>
+ </tr>
+ <tr height="20">
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+  <td valign="center" bgcolor="#FCC472" style="padding:2px;"><b>Bestellung</b></td>
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+ </tr>
+ </table>
+ <table width="84%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
+ <tr height="1" id="border_horizontal">
+  <td bgcolor="#FFFFFF" colspan="3"><img src="../images/border_horizontal.gif" width="6" height="1" border="0" alt=""></td>
+ </tr>
+ <tr>
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+  <td bgcolor="#FFDDAA" style="padding:6px;" valign="top" align="left"><br>
+  &Uuml;berpr&uuml;fen Sie bitte folgende Angaben auf deren Korrektheit:<br>
+
+  <br>
+  <table width="98%" cellspacing="2" cellpadding="1" border="0">
+  <tr>
+   <td width="150"><b>Mailaddresse:</b>&nbsp;</td>
+   <td>$_POST[email]</td>
+  </tr>
+  <tr>
+   <td><b>Name:</b>&nbsp;</td>
+   <td>$_POST[name]</td>
+  </tr>
+  <tr>
+   <td><b>Vorname:</b>&nbsp;</td>
+   <td>$_POST[first_name]</td>
+  </tr>
+  <tr>
+   <td><b>Strasse, Hausnummer:</b>&nbsp;</td>
+   <td>$_POST[street]</td>
+  </tr>
+  <tr>
+   <td><b>PLZ, Ort:</b>&nbsp;</td>
+   <td>$_POST[location]</td>
+  </tr>
+  <tr>
+   <td><b>Telefonnumer:</b>&nbsp;</td>
+   <td>$_POST[phonenumber]</td>
+  </tr>
+  </table><br>
+
+  <hr noshade size="1" style="width:300px; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;">
+
+  <div align="center"><table width="98%" cellspacing="1" cellpadding="4" border="0" bgcolor="#000000">
+  <tr>
+   <td bgcolor="#FFD695" width="100%" align="left" colspan="2">
+
+   <table width="100%">
+   $subscription_step2_list
+   </table>
+   </td>
+  </tr>
+  </table>
+  <table width="98%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+   <td align="right">
+
+   <table cellspacing="1" cellpadding="4" border="0" bgcolor="#000000">
+   <tr>
+   <td bgcolor="#FFD695" align="left" nowrap><b>Summe:</b></td>
+   <td bgcolor="#FFDDAA" width="80" align="right"><b>$total_price $options[currency]</b></td>
+  </tr>
+  <tr>
+   <td bgcolor="#FFD695" align="left" nowrap><b>Rabatt:</b></td>
+   <td bgcolor="#FFDDAA" width="80" align="right"><b>-$total_discount $options[currency]</b></td>
+  </tr>
+  <tr>
+   <td bgcolor="#FFD695" align="left" nowrap><b>Gesamtpreis:</b></td>
+   <td bgcolor="#FFDDAA" width="80" align="right"><b>$final_price $options[currency]</b></td>
+  </tr>
+  </table>
+
+   </td>
+  </tr>
+  </table></div><br>
+
+  <table width="100%" cellspacing="4" cellpadding="3" border="0">
+   <tr>
+   <td align="right" nowrap width="50%">
+
+   <form action="subscription.php" method="POST">
+   <input type="hidden" name="associate" value="$associate">
+   <input type="hidden" name="email" value="$_POST[email]">
+   <input type="hidden" name="name" value="$_POST[name]">
+   <input type="hidden" name="first_name" value="$_POST[first_name]">
+   <input type="hidden" name="street" value="$_POST[street]">
+   <input type="hidden" name="location" value="$_POST[location]">
+$subscription_hidden<input type="hidden" name="phonenumber" value="$_POST[phonenumber]">
+   <input type="image" alt="Angaben &auml;ndern" border="0" src="images/subscription_edit.gif" style="border:0px;">
+  </td></form>
+   <td align="left" nowrap width="50%">
+
+   <form action="subscription_done.php" method="POST">
+   <input type="hidden" name="associate" value="$associate">
+   <input type="hidden" name="email" value="$_POST[email]">
+   <input type="hidden" name="name" value="$_POST[name]">
+   <input type="hidden" name="first_name" value="$_POST[first_name]">
+   <input type="hidden" name="street" value="$_POST[street]">
+   <input type="hidden" name="location" value="$_POST[location]">
+$subscription_hidden<input type="hidden" name="phonenumber" value="$_POST[phonenumber]">
+   <input type="image" alt="Fertigstellen" border="0" src="images/subscription_done.gif" style="border:0px;">
+   </td></form>
+  </tr>
+  </table>
+
+</td>
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+ </tr>
+ <tr height="1" id="border_horizontal">
+  <td bgcolor="#FFFFFF" colspan="4"><img src="../images/border_horizontal.gif" width="6" height="1" border="0" alt=""></td>
+ </tr>
+ </table>
+ <br><br>

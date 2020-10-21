@@ -1,0 +1,13 @@
+<?php
+/*
+acp template
+templatename: designpack_viewbit
+*/
+
+$this->templates['acp_designpack_viewbit']="<tr class=\\\"\$rowclass\\\">
+ <td width=\\\"100%\\\"><b>\$row[designpackname]</b></td>
+ <td><a href=\\\"designpack.php?action=edit&amp;designpackid=\$row[designpackid]&amp;sid=\$session[hash]\\\">{\$lang->items['LANG_ACP_GLOBAL_EDIT']}</a></td>
+ <td><a href=\\\"designpack.php?action=copy&amp;designpackid=\$row[designpackid]&amp;sid=\$session[hash]\\\">{\$lang->items['LANG_ACP_GLOBAL_COPY']}</a></td>
+ <td><a href=\\\"designpack.php?action=del&amp;designpackid=\$row[designpackid]&amp;sid=\$session[hash]\\\">{\$lang->items['LANG_ACP_GLOBAL_DELETE']}</a></td>
+</tr>";
+?>

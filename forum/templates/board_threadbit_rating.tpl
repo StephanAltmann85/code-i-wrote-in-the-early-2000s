@@ -1,0 +1,1 @@
+<img src="{$style['imagefolder']}/star.gif" border="0" alt="{$LANG_BOARD_THREAD_RATING}" title="{$LANG_BOARD_THREAD_RATING}" />

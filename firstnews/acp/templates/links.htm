@@ -1,0 +1,81 @@
+ <table width="84%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
+ <tr height="1" id="border_horizontal">
+  <td bgcolor="#FFFFFF" colspan="3"><img src="../images/border_horizontal.gif" width="6" height="1" border="0" alt=""></td>
+ </tr>
+ <tr height="20">
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+  <td valign="center" bgcolor="#FCC472" style="padding:2px;"><img src="../images/notice.gif" border="0" alt="">&nbsp;<b>Links</b></td>
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+ </tr>
+ </table>
+ <table width="84%" cellspacing="0" cellpadding="0" border="0" bgcolor="#000000">
+ <tr height="1" id="border_horizontal">
+  <td bgcolor="#FFFFFF" colspan="3"><img src="../images/border_horizontal.gif" width="6" height="1" border="0" alt=""></td>
+ </tr>
+ <tr>
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+  <td bgcolor="#FFDDAA" style="padding:6px;" align="center">
+
+  <form action="index.php" name="acp_form" method="GET">
+  <input type="hidden" name="action" value="insert_link">
+  <input type="hidden" name="id" value="$_GET[id]">
+  <input type="hidden" name="sid" value="$sid">
+
+  <table width="80%" bgcolor="#000000" cellspacing="1" cellpadding="4">
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>URL:</B></td>
+   <td width="53%" bgcolor="#FFDDAA" align="center"><input type="Text" name="url" value="" size="32" maxlength="255" class="subscription"></td>
+  </tr>
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>Text:</B><br>
+   -Wenn Grafik vorhanden, alternative Beschreibung</td>
+   <td width="53%" bgcolor="#FFDDAA" align="center"><input type="Text" name="text" value="" size="32" maxlength="255" class="subscription"></td>
+  </tr>
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>Grafik:</B></td>
+   <td width="53%" bgcolor="#FFDDAA" align="center"><input type="Text" name="graphic_source" value="" size="32" maxlength="255" class="subscription"></td>
+  </tr>
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>Sortierung:</B></td>
+   <td width="53%" bgcolor="#FFDDAA" align="center">
+   <select name="partner" size="1">
+    <option value="0">Bewertungsseite</option>
+    <option value="1">Partner</option>
+   </select></td>
+  </tr>
+  <tr>
+   <td colspan="2" align="center" bgcolor="#FFDDAA"><input type="Submit" name="" value="Hinzufügen" class="subscription"></td>
+  </tr>
+  </table></form>
+  <b><u>Bewertungsseiten</u></b><br><br>
+
+
+  <table width="80%" bgcolor="#000000" cellspacing="1" cellpadding="4">
+  <tr>
+   <td bgcolor="#FFD695"><B>URL</B></td>
+   <td bgcolor="#FFD695"><B>Text</B></td>
+   <td width="100" bgcolor="#FFD695"><B>Grafik</B></td>
+   <td bgcolor="#FFD695" width="70" align="center"><B>Bearbeiten</B></td>
+  </tr>
+  $voting_sites_list
+  </table><br>
+  <hr noshade size="1" style="width:80%; color:#FFDDAA; height:1px; text-align:center; border:1px dashed #000000;">
+
+  <b><u>Partnersites</u></b><br><br>
+
+  <table width="80%" bgcolor="#000000" cellspacing="1" cellpadding="4">
+  <tr>
+   <td bgcolor="#FFD695"><B>URL</B></td>
+   <td bgcolor="#FFD695"><B>Text</B></td>
+   <td width="100" bgcolor="#FFD695"><B>Grafik</B></td>
+   <td bgcolor="#FFD695" width="70" align="center"><B>Bearbeiten</B></td>
+  </tr>
+  $partner_sites_list
+  </table>
+  </td>
+  <td bgcolor="#FCC472" id="border_vertical" width="1"></td>
+ </tr>
+ <tr height="1" id="border_horizontal">
+  <td bgcolor="#FFFFFF" colspan="3"><img src="../images/border_horizontal.gif" width="6" height="1" border="0" alt=""></td>
+ </tr>
+ </table><br><br>

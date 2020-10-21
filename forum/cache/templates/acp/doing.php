@@ -1,0 +1,23 @@
+<?php
+/*
+acp template
+templatename: doing
+*/
+
+$this->templates['acp_doing']="<?xml version=\\\"1.0\\\" encoding=\\\"{\$lang->items['LANG_GLOBAL_ENCODING']}\\\"?>
+<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">
+<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\" dir=\\\"{\$lang->items['LANG_GLOBAL_DIRECTION']}\\\" lang=\\\"{\$lang->items['LANG_GLOBAL_LANGCODE']}\\\" xml:lang=\\\"{\$lang->items['LANG_GLOBAL_LANGCODE']}\\\">
+<head>
+<title>\$master_board_name | {\$lang->items['LANG_ACP_OTHERSTUFF_WORKING_DOING']}</title>
+<meta http-equiv=\\\"content-type\\\" content=\\\"text/html;charset={\$lang->items['LANG_GLOBAL_ENCODING']}\\\" />
+<link rel=\\\"stylesheet\\\" href=\\\"css/main.css\\\" />
+</head>
+<body>
+ <table width=\\\"100%\\\">
+  <tr>
+   <td align=\\\"center\\\" valign=\\\"middle\\\" height=\\\"100%\\\">{\$lang->items['LANG_ACP_OTHERSTUFF_WORKING_DOING']}</td>
+  </tr>
+ </table>
+</body>
+</html>";
+?>

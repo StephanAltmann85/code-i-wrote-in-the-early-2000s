@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="{$lang->items['LANG_GLOBAL_ENCODING']}"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{$lang->items['LANG_GLOBAL_DIRECTION']}" lang="{$lang->items['LANG_GLOBAL_LANGCODE']}" xml:lang="{$lang->items['LANG_GLOBAL_LANGCODE']}">
+
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html;charset={$lang->items['LANG_GLOBAL_ENCODING']}" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+<table cellpadding="4" cellspacing="1" border="0" class="tblborder" width="100%" align="center">
+ <tr class="tblhead">
+  <td colspan="<expression>(1 + (int)checkAdminPermissions("a_can_languagepack_edit") + (int)checkAdminPermissions("a_can_languagepack_translate") + (int)checkAdminPermissions("a_can_languagepack_add") + (int)checkAdminPermissions("a_can_languagepack_del") + (int)checkAdminPermissions("a_can_languagepack_export") + (int)checkAdminPermissions("a_can_languagepack_edit"))</expression>">{$lang->items['LANG_ACP_GLOBAL_MENU_LANGUAGEPACK_EDIT']}</td>
+ </tr>
+ <tr class="tblsection" align="center">
+  <td>{$lang->items['LANG_ACP_LANGUAGEPACK_LANGUAGEPACK']}</td>
+  <if(checkAdminPermissions("a_can_languagepack_edit"))><then><td>{$lang->items['LANG_ACP_GLOBAL_EDIT']}</td></then></if>
+  <if(checkAdminPermissions("a_can_languagepack_translate"))><then><td>{$lang->items['LANG_ACP_LANGUAGEPACK_TRANSLATE']}</td></then></if>
+  <if(checkAdminPermissions("a_can_languagepack_add"))><then><td>{$lang->items['LANG_ACP_GLOBAL_COPY']}</td></then></if>
+  <if(checkAdminPermissions("a_can_languagepack_del"))><then><td>{$lang->items['LANG_ACP_GLOBAL_DELETE']}</td></then></if>
+  <if(checkAdminPermissions("a_can_languagepack_export"))><then><td>{$lang->items['LANG_ACP_GLOBAL_EXPORT']}</td></then></if>
+  <if(checkAdminPermissions("a_can_languagepack_edit"))><then><td>{$lang->items['LANG_ACP_GLOBAL_SETDEFAULT_TITLE']}</td></then></if>
+ </tr>
+  $languagepack_viewbit
+</table>
+</body>
+</html>

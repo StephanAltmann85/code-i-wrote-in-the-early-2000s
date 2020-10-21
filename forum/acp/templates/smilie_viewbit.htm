@@ -1,0 +1,7 @@
+<tr class="$rowclass">
+ <td>$smiliepathimage</td>
+ <td width="100%"><b>$row[smilietitle] ($row[smilieorder])</b></td>
+ <td align="center">$row[smiliecode]</td>
+ <if(checkAdminPermissions("a_can_smilie_edit"))><then><td><a href="smilie.php?action=edit&amp;smilieid=$row[smilieid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EDIT']}</a></td></then></if>
+ <if(checkAdminPermissions("a_can_smilie_del"))><then><td><a href="smilie.php?action=del&amp;smilieid=$row[smilieid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</a></td></then></if>
+</tr>

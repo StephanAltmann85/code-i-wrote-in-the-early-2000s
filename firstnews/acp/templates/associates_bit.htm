@@ -1,0 +1,11 @@
+<tr>
+ <td bgcolor="#FFDDAA" rowspan="1">$associate[name], $associate[first_name]<br>
+$associate[street]<br>
+$associate[location]</td>
+ <td bgcolor="#FFDDAA" align="center" rowspan="2">$associate[date]</td>
+ <td bgcolor="#FFDDAA" align="center" rowspan="2"><a href="index.php?action=edit_associate&sid=$sid&id=$associate[id]">Bearbeiten</a><br>
+ <a href="index.php?action=del_associate&sid=$sid&id=$associate[id]">L&ouml;schen</a><br></td>
+</tr>
+<tr>
+ <td bgcolor="#FFD695" align="left"><a href="mailto:$associate[email]">$associate[email]</a></td>
+</tr>

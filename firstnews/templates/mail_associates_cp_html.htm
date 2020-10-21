@@ -1,0 +1,32 @@
+<html>
+<head>
+<style type="text/css">
+<!--
+body, table, td {
+ font-family: Verdana;
+ text-align: left;
+ font-size: 11px;
+}
+h1 {
+ font-family: Verdana;
+ text-align: left;
+ font-size: 17px;
+ font-weight: bold;
+}
+-->
+</style>
+</head>
+<body>
+Sehr geehrte(r) Herr/Frau $associate[name],<br>
+anbei die Zugangsdaten f&uuml;r den Mitgliederbereich des Partnerprogramms.<br><br>
+
+<b>Auftragsnummer:</b> $_POST[id]<br>
+<b>Passwort:</b> $associate[password]<br><br>
+
+Bitte geben Sie diese Daten nicht in Dritte weiter.<br>
+Sie k&ouml;nnen sich absofort jederzeit unter <a href="$options[url]" target="_blank">$options[url]</a> anmelden.<br><br>
+
+Mit freundlichen Gr&uuml;&szlig;en<br>
+Stephan Altmann
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 //EN">
+<html>
+<head>
+<title>pgcNews - Administration</title>
+<meta name="author" content="programmers-club">
+<meta name="generator" content="Stephan Altmann">
+<style type="text/css">
+<!--
+body {
+ font-family: Verdana;
+ font-size: 10px;
+ text-align: left;
+ color: #000000;
+}
+a:link {
+ font-family: Verdana;
+ font-size: 12px;
+ text-decoration: underline;
+ text-align: left;
+ color: #000000;
+ font-weight: bold;
+}
+a:visited {
+ font-family: Verdana;
+ font-size: 12px;
+ text-decoration: underline;
+ text-align: left;
+ color: #000000;
+ font-weight: bold;
+}
+a:hover {
+ font-family: Verdana;
+ font-size: 12px;
+ text-decoration: none;
+ text-align: left;
+ color: #C00000;
+ font-weight: bold;
+}
+TEXTAREA {
+ FONT-SIZE: 12px;
+ FONT-FAMILY: Verdana;
+ COLOR: #000000;
+ BACKGROUND-COLOR: #7F99B2;
+
+ SCROLLBAR-BASE-COLOR: #7F99B2;
+ SCROLLBAR-ARROW-COLOR: #FFFFFF;
+
+ border-top-width : 1px;
+ border-right-width : 1px;
+ border-bottom-width : 1px;
+ border-left-width : 1px;
+
+ border-top-color : #000000;
+ border-right-color : #000000;
+ border-bottom-color : #000000;
+ border-left-color : #000000;
+}
+input {
+ FONT-SIZE: 12px;
+ FONT-FAMILY: Verdana;
+ COLOR: #000000;
+ BACKGROUND-COLOR: #7F99B2;
+ border-top-width : 1px;
+ border-right-width : 1px;
+ border-bottom-width : 1px;
+ border-left-width : 1px;
+
+ border-top-color : #000000;
+ border-right-color : #000000;
+ border-bottom-color : #000000;
+ border-left-color : #000000;
+}
+table {
+ font-family: Verdana;
+ text-align: left;
+}
+td {
+ background: #FFFFFF;
+ font-size: 10px;
+ text-decoration: bold;
+ FONT-FAMILY: Verdana;
+}
+h1 {
+ font-family: Verdana;
+ font-size: 18pt;
+ text-align: left;
+}
+h2 {
+ font-family: Verdana;
+ font-size: 12pt;
+ text-align: left;
+}
+-->
+</style>
+</head>
+<body >
+
+<?php
+include("config_data.php");
+include("layout.php");
+
+$sendletter = "admin.php?login=" . $admin_psw;
+$editemail = "admin.php?login=" . $admin_psw . "&id=edit";
+$log_info = "admin.php?login=" . $admin_psw . "&id=log";
+$datei = fopen("$mailingliste", "r");
+$textarea = fgets($datei, 262144);
+fclose($datei);
+
+
+if($login == $admin_psw)
+{
+  switch ($id)
+  {
+  case "edit":
+    include("acp/edit_maillist.php");
+    break;
+  case "log":
+    include("acp/log_info.php");
+    break;
+  default:
+    include("acp/send_mail.php");
+    break;
+  }
+}
+  else
+{
+  echo "<div align=center><b>Bitte geben Sie Ihr Passwort für den Zugang zum Control Panel ein.</b>
+<br><br>
+  <table cellspacing=1 cellpadding=3>
+  <form action=admin.php method=get>
+<tr>
+ <td><input type=Password name=login size=35 maxlength=20 value=>
+  <input type=Submit name=btnlogin value=Einloggen></td>
+</tr>
+</table>
+  </form></div>";
+}
+
+echo "$footer";
+?>
+
+</body>
+</html>

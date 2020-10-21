@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /forum/archive
+RewriteRule ^index\.html$   index.php   [L]
+RewriteRule ^([0-9]*)/board\.html$   board.php?boardid=$1   [L]
+RewriteRule ^([0-9]*)/([0-9]*)/board\.html$   board.php?boardid=$1&page=$2   [L]
+RewriteRule ^([0-9]*)/thread\.html$   thread.php?threadid=$1   [L]
+RewriteRule ^([0-9]*)/([0-9]*)/thread\.html$   thread.php?threadid=$1&page=$2   [L]

@@ -1,0 +1,35 @@
+# Languagepack-Export: Deutsch (export)
+# Languagecode: de
+# Date: 27.02.2005 18:41
+# wBB Version: 2.3.0
+
+
+
+[ACP_LOCATOR]
+
+<text:LANG_ACP_LOCATOR_COORDS>Koordinaten</LANG_ACP_LOCATOR_COORDS:text>
+<text:LANG_ACP_LOCATOR_DELETE>Entfernen</LANG_ACP_LOCATOR_DELETE:text>
+<text:LANG_ACP_LOCATOR_DELETE_REQUEST>Diesen Eintrag wirklich l&ouml;schen?</LANG_ACP_LOCATOR_DELETE_REQUEST:text>
+<text:LANG_ACP_LOCATOR_RESIDENCE>Herkunft</LANG_ACP_LOCATOR_RESIDENCE:text>
+<text:LANG_ACP_LOCATOR_TITLE>Landkarteneinträge bearbeiten</LANG_ACP_LOCATOR_TITLE:text>
+<text:LANG_ACP_LOCATOR_USERNAME>Benutzername</LANG_ACP_LOCATOR_USERNAME:text>
+
+
+
+[Locator]
+
+<text:LANG_LOCATOR_CHOOSE_STATE>Bundesland wählen...</LANG_LOCATOR_CHOOSE_STATE:text>
+<text:LANG_LOCATOR_DELETE>Eigenen Eintrag entfernen</LANG_LOCATOR_DELETE:text>
+<text:LANG_LOCATOR_DELETE_MESSAGE>Eigenen Eintrag wirklich entfernen?</LANG_LOCATOR_DELETE_MESSAGE:text>
+<text:LANG_LOCATOR_ENTER>Eigenen Eintrag hinzuf&uuml;gen</LANG_LOCATOR_ENTER:text>
+<text:LANG_LOCATOR_ENTER_CHOOSE_STATE>Eintragen - Bundesland wählen...</LANG_LOCATOR_ENTER_CHOOSE_STATE:text>
+<text:LANG_LOCATOR_ENTER_RESIDENCE>Eintragen - Angaben zum Wohnort</LANG_LOCATOR_ENTER_RESIDENCE:text>
+<text:LANG_LOCATOR_MESSAGE_ERROR>Ihr Eintrag konnte leider nicht erfolgreich gespeichert werden.</LANG_LOCATOR_MESSAGE_ERROR:text>
+<text:LANG_LOCATOR_MESSAGE_SAVED>Ihr Eintrag konnte erfolgreich gespeichert werden.</LANG_LOCATOR_MESSAGE_SAVED:text>
+<text:LANG_LOCATOR_POPUP_CLOSE>Seite Schliessen</LANG_LOCATOR_POPUP_CLOSE:text>
+<text:LANG_LOCATOR_POSTCODE>Postleitzahl</LANG_LOCATOR_POSTCODE:text>
+<text:LANG_LOCATOR_POSTS>Beitr&auml;ge</LANG_LOCATOR_POSTS:text>
+<text:LANG_LOCATOR_RESIDENCE>Wohnort</LANG_LOCATOR_RESIDENCE:text>
+<text:LANG_LOCATOR_SAVE>Speichern</LANG_LOCATOR_SAVE:text>
+<text:LANG_LOCATOR_TITLE>Wer wohnt wo?</LANG_LOCATOR_TITLE:text>
+<text:LANG_LOCATOR_USERNAME>Username</LANG_LOCATOR_USERNAME:text>

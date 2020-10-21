@@ -1,0 +1,43 @@
+<table bgcolor="#000000" cellpadding="0" cellspacing="0" width="100%" summary="Überschrift Kontakt">
+ <tr height="25" class="cat">
+  <td bgcolor="#FFFFFF" valign="middle" style="border-left: 1px #000000 solid; padding-left: 5px; border-bottom: 1px #000000 solid; border-top: 1px #000000 solid;" width="25"><img src="images/mail.gif" border="0" alt=""></td>
+  <td bgcolor="#FFFFFF" valign="middle" align="left" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; border-top: 1px #000000 solid;">Kontakt</td>
+ </tr>
+ </table>
+ <table bgcolor="#000000" cellpadding="15" cellspacing="0" width="100%" summary="Kontakt">
+ <tr height="25">
+  <td bgcolor="#A7BFDB" valign="top" style="border-left: 1px #000000 solid; border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 15px;" align="left">
+$report_message
+<form enctype="multipart/form-data" action="contact.php" method="POST">
+  
+  <table border="0" summary="Eingabefelder" cellpadding="2" cellspacing="0" width="100%">
+  <tr>
+  <td valign="middle" width="100"><b>Ihre EMail:</b></td>
+  <td valign="top"><input type="text" name="email" value="$_POST[email]" size="30"></td>
+  <td rowspan="3" valign="top" width="20">&nbsp;</td>
+  <td rowspan="3" valign="top">Dieses Formular soll es Ihnen ermöglichen, mit uns direkt in Kontakt zu treten, wenn Sie Fragen, Anregungen und Sonstiges an uns direkt richten möchten.<br><br>
+
+Wenn Sie über, für uns interessante Inhalte verfügen, dann verwenden Sie bitte das Formular auf der entsprechenden Themenseite. (Bsp. Tipps - "Tipp hinzufügen")<br><br>
+
+Des weiteren möchten wir Sie bitten, den Kontakt möglichst über das <a href="http://www.coder-treff.de" target="_blank"><b>Forum</b></a> zu suchen.<input type="hidden" name="send" value="yes"></td>
+ </tr>
+ <tr>
+  <td valign="middle"><b>Betreff:</b></td>
+  <td valign="top"><input type="text" name="subject" value="$_POST[subject]" size="30"></td>
+ </tr>
+ <tr>
+  <td valign="top"><b>Nachricht:</b></td>
+  <td valign="top"><textarea name="message" rows="15" cols="40">$_POST[message]</textarea></td>
+ </tr>
+ <tr>
+  <td valign="middle"><b>Dateianhang:</b><br>(max. $upload_max_filesize)</td>
+  <td valign="middle" colspan="3"><input type="file" name="attachment" name="attachment" value="" size="30"></td>
+ </tr>
+ <tr>
+  <td valign="middle" colspan="4" align="left"><input type="submit" name="" value="Absenden" style="text-align: center;"></td>
+ </tr></form>
+ </table>
+  
+  </td>
+ </tr>
+ </table><br><br>

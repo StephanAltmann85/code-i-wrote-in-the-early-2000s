@@ -1,0 +1,90 @@
+<table cellpadding="4" cellspacing="1" border="0" width="90%" bgcolor="#000000">
+<tr bgcolor="#FCC472">
+ <td colspan="2">
+
+ <table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td width="100%"><b>$client[first_name] $client[name]</b></td>
+  <td width="200" align="center" nowrap><b>Abrechnung/Lizenzen</b></td>
+ <tr>
+ </table>
+
+ </td>
+</tr>
+<tr bgcolor="#FFDDAA">
+ <td width="100%" valign="top">
+
+ <table width="100%">
+ <tr>
+  <td><B>Registriert am:</B></td>
+  <td>$client[date]</td>
+ </tr>
+ <tr>
+  <td valign="top"><B>Boardname:</B></td>
+  <td>$board_username</td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+
+ <form action="member.php" method="GET">
+ <input type="hidden" name="action" value="edit_client">
+ <input type="hidden" name="id" value="$client[id]">
+ <input type="hidden" name="sid" value="$sid">
+ <input type="hidden" name="associate" value="$associate">
+ <tr>
+  <td><B>Strasse, Nr.:</B></td>
+  <td><input type="Text" name="street" value="$client[street]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>PLZ, Ort:</B></td>
+  <td><input type="Text" name="location" value="$client[location]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Telefon:</B></td>
+  <td><input type="Text" name="phonenumber" value="$client[phonenumber]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>eMail:</B></td>
+  <td><input type="Text" name="email" value="$client[email]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td align="center"><input type="image" alt="Angaben &auml;ndern" border="0" src="images/subscription_edit.gif" style="border:0px;" onClick="return Message('Eingaben wirklich &auml;ndern?')"></td>
+ </tr></form>
+ </table>
+
+ </td>
+ <td width="220" align="center" nowrap valign="top">
+ $member_products<br><br>
+
+ <b>Gesamtpreis:</b> $final_price $options[currency]
+ </td>
+</tr>
+<tr bgcolor="#FFDDAA">
+ <td align="center">
+ <form action="member.php" method="GET">
+ <input type="hidden" name="associate" value="$associate">
+ <input type="hidden" name="action" value="update_licences_url">
+ <input type="hidden" name="id" value="$client[id]">
+ <input type="hidden" name="sid" value="$sid">
+ <textarea name="licences_url" cols="50" rows="5" class="subscription">$client[licences_url]</textarea><br>
+ <input type="image" alt="Angaben &auml;ndern" border="0" src="images/subscription_edit.gif" style="border:0px;" onClick="return Message('Eingaben wirklich &auml;ndern?')"></td>
+ <td><b><u>Hinweis:</u></b><br>
+ Urls zu den Web-Projekten, auf denen bei uns erworbene Lizenzen genutzt werden, bitte hier, durch Zeilenumbruch voneinander getrennt, eintragen.</td>
+</tr></form>
+<tr bgcolor="#FFDDAA">
+ <td colspan="2" align="center">
+ <div style="padding: 4px;" align="left"><b><u>Downloads</u></b></div>
+
+ <table width="98%" cellspacing="1" cellpadding="2" border="0" bgcolor="#000000">
+ <tr>
+  <td bgcolor="#FFDDAA" width="80%"><b>Produkt</b></td>
+  <td bgcolor="#FFDDAA" align="center" valign="bottom"><b>Dateigr&ouml;&szlig;e</b></td>
+ </tr>
+ $member_downloads
+ </table><br>
+
+ </td>
+</tr>
+</table><br><br>

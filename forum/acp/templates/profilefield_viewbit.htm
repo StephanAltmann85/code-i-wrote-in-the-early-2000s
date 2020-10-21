@@ -1,0 +1,5 @@
+<tr class="$rowclass">
+ <td width="100%"><b>$row[title] ($row[fieldorder])</b></td>
+ <if(checkAdminPermissions("a_can_profilefield_edit"))><then><td><a href="profilefield.php?action=edit&amp;profilefieldid=$row[profilefieldid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EDIT']}</a></td></then></if>
+ <if(checkAdminPermissions("a_can_profilefield_del"))><then><td><a href="profilefield.php?action=del&amp;profilefieldid=$row[profilefieldid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</a></td></then></if>
+</tr>

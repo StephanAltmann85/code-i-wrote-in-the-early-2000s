@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>1st News - Administration [$title]</title>
+<meta name="author" content="Stephan Altmann">
+
+<script type="text/javascript">
+<!--
+function Send(Message)
+{
+  document.acp_form.action.value = "send_newsletter";
+
+  var x = window.confirm(Message);
+  return x;
+}
+function preview()
+{
+  document.acp_form.target = "_blank";
+  document.acp_form.action.value = "preview";
+}
+function Message(Message) {
+ var x = window.confirm(Message);
+ return x;
+}
+function Go(x) {
+ if(x != "nothing") {
+   location.href = "index.php?action=templateeditor&template_file=" + x + "&sid=$sid";
+ }
+}
+function DelTemplate() {
+ var x = document.acp_form.template_del.options[document.acp_form.template_del.options.selectedIndex].value;
+
+ if(x != "nothing") {
+   location.href = "index.php?action=del_template&template_file=" + x + "&sid=$sid";
+ }
+}
+function chkFormular()
+{
+ if(document.acp_form.template_file.value == "")  {
+   alert("Sie müssen einen Dateinamen angeben unter dem die Templatedatei gespeichert werden soll!");
+   document.acp_form.template_file.focus();
+   return false;
+  }
+}
+function ChangePassword()
+{
+ if(document.acp_form.new_password.value != document.acp_form.repeat_new_password.value)  {
+   alert("Die Werte der beiden Passwortfelder stimmen nicht überein! Bitte wiederholen Sie Ihre Eingabe.");
+   document.acp_form.new_password.focus();
+   return false;
+  }
+}
+//-->
+</script>
+
+<style type="text/css">
+<!--
+body {
+ font-family: Verdana;
+ font-size: 10px;
+ text-align: left;
+ color: #0E3989;
+ background: #FFFFFF;
+
+ margin-top: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+
+ scrollbar-base-color: #FFFFFF;
+ scrollbar-3dlight-color: #DFDFDF;
+ scrollbar-arrow-color: #FFFFFF;
+ scrollbar-darkshadow-color: #0E3989;
+ scrollbar-face-color: #7F99B2;
+ scrollbar-highlight-color: #B3C2D2;
+ scrollbar-shadow-color: #000000;
+ scrollbar-track-color: #7F99B2;
+}
+textarea, input, select {
+ font-family: Verdana;
+ font-size: 10px;
+ font-weight: bold;
+ color: #0E3989;
+ background-color: #A3B0BD;
+
+ border-top-width : 1px;
+ border-right-width : 1px;
+ border-bottom-width : 1px;
+ border-left-width : 1px;
+
+ border-top-color : #000000;
+ border-right-color : #000000;
+ border-bottom-color : #000000;
+ border-left-color : #000000;
+}
+table {
+ font-family: Verdana;
+ font-size: 10px;
+ text-align: left;
+ color: #0E3989;
+}
+a {
+ font-family: Verdana;
+ color: #0E3989;
+}
+a:hover {
+ color: #800000;
+ text-decoration: none;
+}
+.black {
+ font-family: Verdana;
+ font-size: 10px;
+ color: #000000;
+ font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table border="0" style="width:100%;" cellpadding="0" cellspacing="0" height="100%">
+<tr>
+ <td align="left" background="images/table_background.gif" colspan="2">
+
+ <table cellpadding="0" cellspacing="0" border="0">
+ <tr>
+  <td style="width:100%;"><img src="images/top_logo.gif" border="0" alt="1st News"></td>
+  <td><img src="images/top_right.gif" border="0" alt="1st News"></td>
+ </tr>
+ </table>
+
+ </td>
+</tr>
+<tr height="100%">
+ <td width="185">
+
+ <table border="0" cellpadding="0" cellspacing="0" width="185" height="100%">
+ <tr height="20">
+  <td background="images/table_background.gif" style="border-top-width:1px; border-top-style:solid; border-left-width:1px; border-left-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-color:#000000;">&nbsp;</td>
+  <td background="images/table_background.gif" align="left" style="border-top-width:1px; border-top-style:solid; border-right-width:1px; border-right-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-color:#000000;"><div class="black">Navigation</div></td>
+ </tr>
+ <tr height="100%">
+  <td colspan="2" style="border-right-width:1px; border-right-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-left-width:1px; border-left-style:solid; border-color:#000000;" align="left" bgcolor="#A3B0BD"><br><br>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="185" height="100%" bgcolor="#A3B0BD">
+  <tr>
+   <td width="10">&nbsp;</td>
+   <td valign="top">
+   $nav
+
+   <a href="http://www.programmers-club.de" target="_blank"><b>Herstellerseite</b></a><br>
+   <a href="http://www.coder-treff.de" target="_blank"><b>Support-Forum</b></a><br><br><br>
+   </td>
+  </tr>
+  </table>
+
+  </td>
+ </tr>
+ <tr height="20">
+  <td colspan="2" background="images/table_background.gif" align="center" style="border-left-width:1px; border-left-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-right-width:1px; border-right-style:solid; border-color:#000000;">Copyright by Stephan Altmann</td>
+ </tr>
+ </table>
+
+ </td>
+ <td valign="top" align="center" style="width:100%;"><br><br><br>
+
+ <table border="0" bgcolor="#A3B0BD" cellpadding="0" cellspacing="0" width="90%">
+ <tr height="20">
+  <td background="images/table_background.gif" style="border-top-width:1px; border-top-style:solid; border-left-width:1px; border-left-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-color:#000000;">&nbsp;</td>
+  <td background="images/table_background.gif" align="left" style="border-top-width:1px; border-top-style:solid; border-right-width:1px; border-right-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-color:#000000;" width="100%"><div class="black">$title</div></td>
+ </tr>
+ <tr>
+  <td style="border-left-width:1px; border-left-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-color:#000000;">&nbsp;</td>
+  <td style="border-right-width:1px; border-right-style:solid; border-bottom-width:1px; border-bottom-style:solid; border-color:#000000;">$content</td>
+ </tr>
+ </table>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

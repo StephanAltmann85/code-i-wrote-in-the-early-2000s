@@ -1,0 +1,16 @@
+<tr>
+ $tds
+ <td colspan="$colspan" class="firstrow" width="100%"><select name="boardorder[$boards[boardid]]">$options</select>&nbsp;<b><a href="../board.php?boardid=$boards[boardid]" target="_blank">$boards[title]</a></b></td>
+ <td class="secondrow">
+ <select name="boardaction[]" onchange="boardAction(this)">
+  <option value="">{$lang->items['LANG_ACP_GLOBAL_PLEASE_SELECT']}</option>
+  <option value="">--------------------</option>
+  <if(checkAdminPermissions("a_can_boards_edit"))><then><option value="board.php?action=edit&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EDIT']}</option></then></if>
+  <if(checkAdminPermissions("a_can_boards_del"))><then><option value="board.php?action=del&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_DELETE']}</option></then></if>
+  <if(checkAdminPermissions("a_can_boards_empty"))><then><option value="board.php?action=empty&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_GLOBAL_EMPTY']}</option></then></if>
+  <if(checkAdminPermissions("a_can_boards_permissions"))><then><option value="board.php?action=permissions&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_BOARD_PERMISSIONS']}</option></then></if>
+  <if(checkAdminPermissions("a_can_boards_rights"))><then><option value="board.php?action=rights&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_BOARD_RIGHTS']}</option></then></if>
+  <if(checkAdminPermissions("a_can_moderator_add"))><then><option value="board.php?action=addmoderator&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_BOARD_MODERATOR_ADD']}</option></then></if>
+  <if(checkAdminPermissions("a_can_moderator_edit") || checkAdminPermissions("a_can_moderator_del"))><then><option value="board.php?action=viewmoderator&amp;boardid=$boards[boardid]&amp;sid=$session[hash]">{$lang->items['LANG_ACP_BOARD_MODERATOR_EDIT']}</option></then></if>
+ </select>&nbsp;<input type="submit" name="submit_boardaction" value="{$lang->items['LANG_ACP_GLOBAL_GO']}" /></td>
+</tr>

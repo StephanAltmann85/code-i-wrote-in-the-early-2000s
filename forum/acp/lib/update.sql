@@ -1,0 +1,3 @@
+update bb1_options set showorder=showorder+1 where optiongroupid=4 AND showorder>6;
+INSERT INTO bb1_options VALUES (NULL, 4, 'regnotify', '0', 'Benachrichtigung bei neuer Registrierung?', 'Wollen Sie über neue Registrierungen per eMail informiert werden? (Die eMail wird an die Kontakt eMail Adresse geschickt.)', 'truefalse', 7);
+update bb1_options set title='Bilder in der Signatur erlauben?' where varname='maxsigimage';

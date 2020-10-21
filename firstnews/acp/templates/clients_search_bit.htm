@@ -1,0 +1,35 @@
+
+<form action="index.php" method="GET">
+<table border="0" cellpadding="1" cellspacing="0" width="98%" height="30">
+<tr>
+ <td bgcolor="#FFDDAA" valign="top"><b>Tabelle:</b>
+
+ <select name="row" size="1" class="subscription">
+  <option value="id">Auftragsnummer</option>
+  <option value="name">Name</option>
+  <option value="first_name">Vorname</option>
+  <option value="street">Straﬂe</option>
+  <option value="location">PLZ, Ort</option>
+  <option value="email">EMail</option>
+  <option value="phonenumber">Telefonnummer</option>
+  <option value="licences_url">Projektseite</option>
+  <option value="payed">Bezahlt?</option>
+  <option value="board_user_id">Board UserId</option>
+ </select><br>
+ <b>Platzhalter:</b> % (n-Zeichen)
+
+ </td>
+ <td bgcolor="#FFDDAA" align="center" valign="top">
+  <b>Wert:</b> <input type="Text" name="criterion" value="" size="15" maxlength="255" class="subscription">
+ </td>
+ <td bgcolor="#FFDDAA" align="center" valign="top">
+  <select name="order" size="1" class="subscription">
+   <option value="ASC">Aufsteigend</option>
+   <option value="DESC">Absteigend</option>
+  </select>
+ </td>
+ <td bgcolor="#FFDDAA" valign="top"><input type="Submit" name="" value="Suchen" class="subscription"></td>
+</tr>
+</table>
+<input type="hidden" name="action" value="search_clients">
+</form>

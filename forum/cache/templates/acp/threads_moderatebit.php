@@ -1,0 +1,12 @@
+<?php
+/*
+acp template
+templatename: threads_moderatebit
+*/
+
+$this->templates['acp_threads_moderatebit']="<tr class=\\\"\$rowclass\\\">
+ <td><a href=\\\"../thread.php?threadid=\$row[threadid]\\\" target=\\\"_blank\\\">\$row[topic]</a></td>
+ <td>\$row[starter]</td>
+ <td><input type=\\\"checkbox\\\" name=\\\"setvisible[]\\\" value=\\\"\$row[threadid]\\\" />&nbsp;{\$lang->items['LANG_ACP_THREADS_ACTIVATE']}</td>
+</tr>";
+?>

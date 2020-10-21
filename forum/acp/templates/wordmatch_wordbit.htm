@@ -1,0 +1,12 @@
+<tr align="center">
+ <if(checkAdminPermissions("a_can_otherstuff_wordmatch2"))>
+ <then>
+ <td class="firstrow"><input type="checkbox" name="wordids[]" id="word_{$row[wordid]}" value="$row[wordid]" /></td>
+ <td align="left" class="secondrow" width="100%"><label for="word_{$row[wordid]}">$row[word]</label></td>
+ </then>
+ <else>
+ <td align="left" class="secondrow" width="100%">$row[word]</td>
+ </else>
+ </if>
+ <td class="firstrow">$row[mount]</td>
+</tr>

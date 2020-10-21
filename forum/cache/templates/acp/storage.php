@@ -1,0 +1,68 @@
+<?php
+/*
+acp template
+templatename: storage
+*/
+
+$this->templates['acp_storage']="<?xml version=\\\"1.0\\\" encoding=\\\"{\$lang->items['LANG_GLOBAL_ENCODING']}\\\"?>
+<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">
+<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\" dir=\\\"{\$lang->items['LANG_GLOBAL_DIRECTION']}\\\" lang=\\\"{\$lang->items['LANG_GLOBAL_LANGCODE']}\\\" xml:lang=\\\"{\$lang->items['LANG_GLOBAL_LANGCODE']}\\\">
+
+<head>
+<title></title>
+<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset={\$lang->items['LANG_GLOBAL_ENCODING']}\\\" />
+<link rel=\\\"stylesheet\\\" href=\\\"css/storage.css\\\" />
+</head>
+
+<body onload=\\\"del();\\\"><form action=\\\"#\\\" name=\\\"sform\\\"><select name=\\\"storage\\\" multiple=\\\"multiple\\\" size=\\\"8\\\" style=\\\"width:270px\\\">
+<option value=\\\"\\\" selected=\\\"selected\\\"></option>
+</select></form><script type=\\\"text/javascript\\\">
+<!--
+ var storage = document.sform.storage;
+
+ function isinstorage(id) {
+  for(i=0;i<storage.length;i++) {
+   if(storage.options[i].value==id) return true;
+  }
+  return false;
+ }
+
+
+ function add(mode,id,title) {
+  if(!isinstorage(id)) {
+   count=storage.length;
+   newoption = new Option(id);
+   storage.options[count] = newoption;
+   storage.options[count].text=title;
+   storage.options[count].value=id;
+   storage.options[count].selected=true;
+  }
+ }
+ 
+ function selall(status) {
+  for(i=0;i<storage.length;i++) {
+   storage.options[i].selected=status;
+  }
+ }
+ 
+ function del() {
+  for(i=0;i<storage.length;i++) {
+   if(storage.options[i].selected) {
+    storage.options[i] = null;
+    i=i-1;
+   }
+  }
+ }
+ 
+ function show() {
+  for(i=0;i<storage.length;i++) {
+   if(storage.options[i].selected) {
+    parent.main.location.href='users.php?userid='+storage.options[i].value+'&action=edit&sid=\$session[hash]';
+    break;
+   }
+  }
+ }
+//-->
+</script></body>
+</html>";
+?>

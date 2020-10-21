@@ -1,0 +1,22 @@
+<table bgcolor="#000000" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+ <td bgcolor="#D6E2F1" style="border-left: 1px #000000 solid; border-right: 1px #000000 solid; border-bottom: 1px #000000 solid;">&nbsp;</td>
+</tr>
+</table>
+<table bgcolor="#000000" cellpadding="0" cellspacing="0" width="100%" summary="Neuigkeiten">
+<tr>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-left: 1px #000000 solid; border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="center" width="60"><img src="images/$links[image]" alt="$links[lang]" border="0"></td>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="left"><a href="links.php?action=count&linkid=$links[linkid]"><b>$links[title]</b></a> <font class="small"><a href="javascript:Vote('links.php', '$links[linkid]');">(Bewerten)</a></font></td>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="center" width="60"></td>
+</tr>
+<tr>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-left: 1px #000000 solid; border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="center" width="60"></td>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="left">$links[description]</td>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="left"></td>
+</tr>
+<tr>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-left: 1px #000000 solid; border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="center" width="60">$links[vote]</td>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="left"><b>Clicks:</b> $links[clicks] | <b>Bewertungen:</b> $links[count]</td>
+ <td bgcolor="#A7BFDB" valign="middle" style="border-right: 1px #000000 solid; border-bottom: 1px #000000 solid; padding: 5px;" align="center" width="60"><a href="links.php?action=report_offline&linkid=$links[linkid]">Offline?</a></td>
+ </tr>
+</table>

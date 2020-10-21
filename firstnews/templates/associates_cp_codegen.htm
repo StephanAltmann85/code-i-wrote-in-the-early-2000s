@@ -1,0 +1,62 @@
+<table cellpadding="4" cellspacing="1" border="0" width="90%" bgcolor="#000000">
+<tr bgcolor="#FCC472">
+ <td align="left"><b>$associate[first_name] $associate[name]</b></td>
+</tr>
+<tr bgcolor="#FFDDAA">
+ <td width="100%" valign="top" align="center">
+
+ <table width="100%">
+ <tr>
+  <td width="120"><B><u>Ihre Werber-ID:</u></B></td>
+  <td>$associate[id]</td>
+ </tr>
+ <tr>
+  <td width="120"><B>Registriert am:</B></td>
+  <td>$associate[date]</td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ </table>
+
+ <div style="padding: 4px;" align="left"><b><u>HTML-Codegenerator</u></b></div><br>
+
+ <form action="" method="" target="" name="textlink"><table width="98%" cellspacing="1" cellpadding="2" border="0" bgcolor="#000000">
+ <tr>
+  <td bgcolor="#FFD695" align="left" colspan="2"><b>Textlink erstellen</b></td>
+ </tr>
+ <tr>
+  <td bgcolor="#FFDDAA" valign="middle" align="center" width="190">
+   <select name="text" size="1" class="subscription">
+    <option value="1st News - PHP-Scripts">1st News - PHP-Scripts</option>
+    <option value="1st News Professional">1st News Professional</option>
+   </select><br>
+  </td>
+  <td bgcolor="#FFDDAA" align="right"><textarea name="textarea" cols="50" rows="3" class="subscription" readonly></textarea></td>
+ </tr>
+ <tr>
+  <td bgcolor="#FFD695" align="right" width="" colspan="2"><input type="button" name="" value="Erstellen" class="subscription" OnClick="Generate(document.textlink.text.value);"></td>
+ </tr>
+ </table><br></form><br><br>
+
+ <table width="98%" cellspacing="1" cellpadding="2" border="0" bgcolor="#000000">
+ <tr>
+  <td bgcolor="#FFD695" align="left" colspan="2"><b>Grafiken</b></td>
+ </tr>
+ $associates_cp_codegen_bit
+ </table>
+
+ <table width="100%">
+ <tr>
+  <td><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ <tr>
+  <td><b><u>Hinweise:</u></b><br>
+  -Die Auszahlung der Provision erfolgt im Regelfall erst $options[pay_period] Tage nach Geldeingang.<br>
+  -Die H&ouml;he der Werbekostenerstattung betr&auml;gt $options[commission]%.</td>
+ </tr>
+ </table>
+
+ </td>
+</tr>
+</table><br><br>

@@ -1,0 +1,133 @@
+{
+Meliksah Port Scanner v0.1 Beta
+(C)opyright 1999 Meliksah Ozoral
+All Rights Reserved
+http://www.mimsa.com/meliksah
+Source Code for Delphi 4
+}
+unit mpsunit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, ExtCtrls, ScktComp;
+
+type
+  TForm1 = class(TForm)
+    Bevel1: TBevel;
+    Bevel2: TBevel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Label3: TLabel;
+    Bevel3: TBevel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Bevel4: TBevel;
+    Edit4: TEdit;
+    ListBox1: TListBox;
+    ps: TClientSocket;
+    procedure Button1Click(Sender: TObject);
+    procedure psConnect(Sender: TObject; Socket: TCustomWinSocket);
+    procedure psError(Sender: TObject; Socket: TCustomWinSocket;
+      ErrorEvent: TErrorEvent; var ErrorCode: Integer);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button4Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  portno:integer;
+implementation
+
+{$R *.DFM}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+button1.enabled:=false;
+edit1.enabled:=false;
+edit2.enabled:=false;
+edit3.enabled:=false;
+edit4.enabled:=false;
+button2.enabled:=true;
+portno:=strtoint(edit2.text);
+ps.address:=edit1.text;
+ps.port:=portno;
+ps.active:=true;
+end;
+
+procedure TForm1.psConnect(Sender: TObject; Socket: TCustomWinSocket);
+label son;
+begin
+listbox1.items.add('Connect on Port : '+inttostr(portno));
+ps.active:=false;
+portno:=portno+1;
+if portno > strtoint(edit3.text) then goto son else
+ps.address:=edit1.text;
+ps.port:=portno;
+ps.active:=true;
+son:
+
+end;
+
+procedure TForm1.psError(Sender: TObject; Socket: TCustomWinSocket;
+  ErrorEvent: TErrorEvent; var ErrorCode: Integer);
+label son;
+begin
+errorcode:=0;
+edit4.text:='Scanned Port No : '+inttostr(portno);
+ps.active:=false;
+portno:=portno+1;
+if portno > strtoint(edit3.text) then goto son else
+ps.address:=edit1.text;
+ps.port:=portno;
+ps.active:=true;
+son:
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+portno:=strtoint(edit3.text);
+button1.enabled:=true;
+edit1.enabled:=true;
+edit2.enabled:=true;
+edit3.enabled:=true;
+edit4.enabled:=true;
+button2.enabled:=false;
+
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+edit4.text:='';
+listbox1.items.clear;
+
+end;
+
+procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ps.active:=false;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+ShowMessage('Meliksah Port Scanner  v0.1 Beta'+#13+
+            '(C)opyright 1999 Meliksah Ozoral'+#13+
+            '       All Rights Reserved      '+#13+#13+
+            '  http://www.mimsa.com/meliksah '+#13+
+            '        mozoral@mimsa.com       ');
+end;
+
+end.

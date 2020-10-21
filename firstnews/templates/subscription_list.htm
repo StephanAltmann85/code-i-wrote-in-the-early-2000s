@@ -1,0 +1,19 @@
+<table width="98%" cellspacing="1" cellpadding="2" border="0" bgcolor="#000000">
+<tr>
+ <td colspan="2" bgcolor="#FFD695"><a href="products.php?id=$id&associate=$associate" target="_blanK"><b>$name</b></a></td>
+</tr>
+<tr>
+ <td bgcolor="#FFDDAA" width="80%">
+ <b>Preis:</b> $price $options[currency] - <b>Sprache:</b> $language<br><br>
+
+ <u>Beschreibung:</u> $short_description</td>
+ <td bgcolor="#FFDDAA" align="center" valign="bottom"><b>Anzahl:</b> <input type="Text" name="$id" value="$_POST[$id]" size="2" maxlength="3" class="subscription"></td>
+</tr>
+<tr>
+ <td bgcolor="#FFDDAA" colspan="2">
+ <b><u>Rabattstaffelung:</u></b><br>
+ Ab $discount_mark_1 Lizenz(en) <b>$discount_rate_1%</b> Rabatt = <b>$discount_1</b> $options[currency] Ersparnis pro Lizenz<br>
+ Ab $discount_mark_2 Lizenz(en) <b>$discount_rate_2%</b> Rabatt = <b>$discount_2</b> $options[currency] Ersparnis pro Lizenz<br>
+ Ab $discount_mark_3 Lizenz(en) <b>$discount_rate_3%</b> Rabatt = <b>$discount_3</b> $options[currency] Ersparnis pro Lizenz</td>
+</tr>
+</table><br>

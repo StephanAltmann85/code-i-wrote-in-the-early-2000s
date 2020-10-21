@@ -1,0 +1,108 @@
+<table cellpadding="4" cellspacing="1" border="0" width="60%" bgcolor="#000000">
+<tr bgcolor="#FCC472">
+ <td>
+
+ <table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+  <td width="100%"><b>Einstellungen</b></td>
+ <tr>
+ </table>
+
+ </td>
+</tr>
+<tr bgcolor="#FFDDAA"><form action="index.php" method="GET">
+ <td width="100%">
+ <b><u>Kontodaten:</u></b><br>
+ <input type="hidden" name="action" value="update_options">
+ <input type="hidden" name="id" value="$options[id]">
+ <input type="hidden" name="sid" value="$sid">
+
+ <table width="100%">
+ <tr>
+  <td><B>Epf&auml;nger:</B></td>
+  <td><input type="Text" name="receiver" value="$options[receiver]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>KTO:</B></td>
+  <td><input type="Text" name="account_number" value="$options[account_number]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>BLZ:</B></td>
+  <td><input type="Text" name="bank_number" value="$options[bank_number]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Kreditinstitut:</B></td>
+  <td><input type="Text" name="bank" value="$options[bank]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;">
+  <b><u>Foreneinstellungen:</u></b><br></td>
+ </tr>
+ <tr>
+  <td><B>Pfad zum Forum</B><br>
+  (rel. Pfadangabe<br>
+  mit abschl. "/")</td>
+  <td><input type="Text" name="board_path" value="$options[board_path]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Pfad zu Grafiken:</B><br>
+  (rel. Pfadangabe<br>zum Forumpfad<br>
+  ohne abschl. "/")</td>
+  <td><input type="Text" name="board_images_path" value="$options[board_images_path]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Pr&auml;fix:</B></td>
+  <td><input type="Text" name="board_prefix" value="$options[board_prefix]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Standardgruppe:</B></td>
+  <td><select name="default_group" size="1" class="subscription">$groups_default_list</select></td>
+ </tr>
+ <tr>
+  <td><B>Kundengruppe:</B></td>
+  <td><select name="mandate_group" size="1" class="subscription">$groups_mandate_list</select></td>
+ </tr>
+ <tr>
+  <td><B>Support-Forum:</B></td>
+  <td><select name="forum_id" size="1" class="subscription">$boards_list</select></td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;">
+  <b><u>Allgemeine Einstellungen:</u></b><br></td>
+ </tr>
+ <tr>
+  <td><B>W&auml;hrung:</B></td>
+  <td><input type="Text" name="currency" value="$options[currency]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Homepage-Url:</B></td>
+  <td><input type="Text" name="url" value="$options[url]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Email des Admin:</B></td>
+  <td><input type="Text" name="webmaster_mail" value="$options[webmaster_mail]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Passwort:</B></td>
+  <td><input type="password" name="password" value="$options[password]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;">
+  <b><u>Partnerprogramm:</u></b><br></td>
+ </tr>
+ <tr>
+  <td><B>Wartezeit Auszahlung:</B></td>
+  <td><input type="Text" name="pay_period" value="$options[pay_period]" size="3" maxlength="255" class="subscription"> <b>Tage</b></td>
+ </tr>
+ <tr>
+  <td><B>Provision:</B></td>
+  <td><input type="Text" name="commission" value="$options[commission]" size="3" maxlength="3" class="subscription"> <b>Prozent</b></td>
+ </tr>
+ <tr>
+  <td align="center"><input type="image" alt="Angaben &auml;ndern" border="0" src="../images/subscription_edit.gif" style="border:0px;" onClick="return Message('Eingaben wirklich &auml;ndern?')"></td>
+ </tr></form>
+ </table>
+
+ </td>
+</tr>
+</table><br><br>

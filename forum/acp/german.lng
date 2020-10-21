@@ -1,0 +1,35 @@
+# Languagepack-Export: Deutsch
+# Languagecode: de
+# Date: 05.08.2004 12:56
+# wBB Version: 2.3.2
+
+
+
+[acp_group]
+
+<text:LANG_ACP_GROUP_VAR_M_CAN_ADD_POLL>Kann Umfragen hinzuf&uuml;gen?</LANG_ACP_GROUP_VAR_M_CAN_ADD_POLL:text>
+<text:LANG_ACP_GROUP_VAR_M_CAN_ANNOUNCE>Kann Ank&uuml;ndigungen erstellen/bearbeiten?</LANG_ACP_GROUP_VAR_M_CAN_ANNOUNCE:text>
+
+
+
+[global]
+
+<text:LANG_GLOBAL_ACCESS_ERROR_DESC>Aus einem der folgenden Gr&uuml;nde fehlt Ihnen die Berechtigung, diese Seite zu betreten:
+<ul>
+<li>Sie sind im Forum nicht angemeldet. Einige Bereiche und Funktionen im Forum sind nur f&uuml;r angemeldete Benutzer zug&auml;nglich. Bitte nutzen Sie die Eingabem&ouml;glichkeit auf dieser Seite, um sich anzumelden. <a href="register.php$SID_ARG_1ST">Falls Sie nicht registriert sind, k&ouml;nnen Sie dies hier tun</a>.</li>
+<li>Ihr Benutzeraccount k&ouml;nnte gesperrt worden sein. Melden Sie sich gegebenenfalls ab und kontaktieren den zust&auml;ndigen Administrator.</li>
+<li>Es gibt Bereiche im Forum, die bestimmten Benutzern vorbehalten sind. Sie haben m&ouml;glicherweise versucht einen solchen Bereich zu betreten.</li>
+</ul></LANG_GLOBAL_ACCESS_ERROR_DESC:text>
+
+
+
+[pms]
+
+<text:LANG_PMS_READ_MESSAGE>Gelesene Nachricht(en)</LANG_PMS_READ_MESSAGE:text>
+<text:LANG_PMS_UNREAD_MESSAGE>Ungelesene Nachricht(en)</LANG_PMS_UNREAD_MESSAGE:text>
+
+
+
+[postings]
+
+<text:LANG_POSTINGS_JS_ERROR2>Nachrichtfeld muss ausgefüllt werden!</LANG_POSTINGS_JS_ERROR2:text>

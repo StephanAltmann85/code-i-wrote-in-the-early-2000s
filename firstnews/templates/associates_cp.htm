@@ -1,0 +1,91 @@
+<table cellpadding="4" cellspacing="1" border="0" width="90%" bgcolor="#000000">
+<tr bgcolor="#FCC472">
+ <td align="left"><b>$associate[first_name] $associate[name]</b></td>
+</tr>
+<tr bgcolor="#FFDDAA">
+ <td width="100%" valign="top">
+
+ <table width="100%">
+  <tr>
+  <td width="120"><B><u>Ihre Werber-ID:</u></B></td>
+  <td>$associate[id]</td>
+ </tr>
+ <tr>
+  <td width="120"><B>Registriert am:</B></td>
+  <td>$associate[date]</td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+
+ <form action="associates_cp.php" method="GET">
+ <input type="hidden" name="action" value="edit_associate">
+ <input type="hidden" name="id" value="$associate[id]">
+ <input type="hidden" name="sid" value="$sid">
+ <tr>
+  <td><B>Strasse, Nr.:</B></td>
+  <td><input type="Text" name="street" value="$associate[street]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>PLZ, Ort:</B></td>
+  <td><input type="Text" name="location" value="$associate[location]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Telefon:</B></td>
+  <td><input type="Text" name="phonenumber" value="$associate[phonenumber]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>eMail:</B></td>
+  <td><input type="Text" name="email" value="$associate[email]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><b><u>Kontodaten</u></b><br>Erforderlich f&uuml;r Auszahlung der Provision</td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ <tr>
+  <td><B>Kontoinhaber:</B></td>
+  <td><input type="Text" name="account_holder" value="$associate[account_holder]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Kontonummer:</B></td>
+  <td><input type="Text" name="account_number" value="$associate[account_number]" size="32" maxlength="20" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Bankleitzahl:</B></td>
+  <td><input type="Text" name="bank_code_number" value="$associate[bank_code_number]" size="32" maxlength="20" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>Kreditinstitut:</B></td>
+  <td><input type="Text" name="bank" value="$associate[bank]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>IBAN*:</B></td>
+  <td><input type="Text" name="iban" value="$associate[iban]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td><B>BIC*:</B></td>
+  <td><input type="Text" name="bic" value="$associate[bic]" size="32" maxlength="255" class="subscription"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ <tr>
+  <td colspan="2"><b>*</b> - Erforderlich, wenn Sitz der Bank ausserhalb Deutschland</td>
+ </tr>
+ <tr>
+  <td colspan="2"><hr noshade size="1" style="width:100%; color:#FFDDAA; height:1px; text-align:left; border:1px dashed #000000;"></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td align="left"><input type="image" alt="Angaben &auml;ndern" border="0" src="images/subscription_edit.gif" style="border:0px;" onClick="return Message('Eingaben wirklich &auml;ndern?')"></td>
+ </tr></form>
+ </table>
+
+ </td>
+</tr>
+</table><br><br>

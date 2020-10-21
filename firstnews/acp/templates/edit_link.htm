@@ -1,0 +1,31 @@
+<form action="index.php" name="acp_form" method="GET">
+  <input type="hidden" name="action" value="update_link">
+  <input type="hidden" name="id" value="$_GET[id]">
+  <input type="hidden" name="sid" value="$sid">
+
+  <table width="80%" bgcolor="#000000" cellspacing="1" cellpadding="4">
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>URL:</B></td>
+   <td width="53%" bgcolor="#FFDDAA" align="center"><input type="Text" name="url" value="$link[url]" size="32" maxlength="255" class="subscription"></td>
+  </tr>
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>Text:</B><br>
+   -Wenn Grafik vorhanden, alternative Beschreibung</td>
+   <td width="53%" bgcolor="#FFDDAA" align="center"><input type="Text" name="text" value="$link[text]" size="32" maxlength="255" class="subscription"></td>
+  </tr>
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>Grafik:</B></td>
+   <td width="53%" bgcolor="#FFDDAA" align="center"><input type="Text" name="graphic_source" value="$link[graphic_source]" size="32" maxlength="255" class="subscription"></td>
+  </tr>
+  <tr>
+   <td width="47%" bgcolor="#FFD695"><B>Sortierung:</B></td>
+   <td width="53%" bgcolor="#FFDDAA" align="center">
+   <select name="partner" size="1">
+    <option value="0">Bewertungsseite</option>
+    <option value="1" $selected>Partner</option>
+   </select></td>
+  </tr>
+  <tr>
+   <td colspan="2" align="center" bgcolor="#FFDDAA"><input type="Submit" name="" value="Hinzufügen" class="subscription"></td>
+  </tr>
+  </table></form>

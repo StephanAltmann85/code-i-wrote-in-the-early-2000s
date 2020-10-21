@@ -1,0 +1,8 @@
+<tr>
+ <td bgcolor="#A7BFDB" align="left" width="40">
+  <select name="sort_$cats[catid]" size="1">$cats_sort_bit</select>
+ </td>
+ <td bgcolor="#A7BFDB" align="left" colspan="2"><b>$cats[title]</b></td>
+ <td bgcolor="#A7BFDB" width="80" align="center"><a href="index.php?action=cat_edit&catid=$cats[catid]&sid=$sid">bearbeiten</a></td>
+ <td bgcolor="#A7BFDB" width="80" align="center"><a href="index.php?action=cats&del=yes&catid=$cats[catid]&sid=$sid" onClick="return Message('Kategorie &quot;$cats[title]&quot; wirklich l&ouml;schen?')">entfernen</a></td>
+</tr>

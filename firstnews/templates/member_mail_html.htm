@@ -1,0 +1,32 @@
+<html>
+<head>
+<style type="text/css">
+<!--
+body, table, td {
+ font-family: Verdana;
+ text-align: left;
+ font-size: 11px;
+}
+h1 {
+ font-family: Verdana;
+ text-align: left;
+ font-size: 17px;
+ font-weight: bold;
+}
+-->
+</style>
+</head>
+<body>
+Sehr geehrte(r) Herr/Frau $client[name],<br>
+anbei die Zugangsdaten für den Mitgliederbereich.<br><br>
+
+<b>Auftragsnummer:</b> $_POST[id]<br>
+<b>Passwort:</b> $client[password]<br><br>
+
+Bitte geben Sie diese Daten nicht in Dritte weiter.<br>
+Sie können sich absofort jederzeit unter <a href="$options[url]" target="_blank">$options[url]</a> anmelden.<br><br>
+
+Mit freundlichen Grüßen<br>
+Stephan Altmann
+</body>
+</html>
